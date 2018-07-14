@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouteeSMSClient", "RouteeSM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{551BFC8B-5B56-4AA4-964E-1F42C024D34B}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Documentation\Documentation.shfbproj", "{B59645B0-D454-4682-BBC9-E2069245AFBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{551BFC8B-5B56-4AA4-964E-1F42C024D34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{551BFC8B-5B56-4AA4-964E-1F42C024D34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{551BFC8B-5B56-4AA4-964E-1F42C024D34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B59645B0-D454-4682-BBC9-E2069245AFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59645B0-D454-4682-BBC9-E2069245AFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59645B0-D454-4682-BBC9-E2069245AFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59645B0-D454-4682-BBC9-E2069245AFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
