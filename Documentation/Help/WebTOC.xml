@@ -2,69 +2,107 @@
 <HelpTOC>
 
   <HelpTOCNode Title="Welcome to the [TODO: Add project name]" Url="html/73bdefcb-4643-444b-8df4-109db3428e97.htm" />
-  <HelpTOCNode Id="08454fcc-cd6e-47a4-919e-8ea510822bc8" Title="Version History" Url="html/b9341e07-8709-46dc-bbe8-d18949557ebb.htm">
+  <HelpTOCNode Id="f4a96bcb-d0a9-4153-8fb8-03d576fcb8cf" Title="Version History" Url="html/b9341e07-8709-46dc-bbe8-d18949557ebb.htm">
     <HelpTOCNode Title="Version 1.0.0.0" Url="html/61805e1c-c135-47f1-ab8a-92b28d3dff5c.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="3728f158-afe8-4cdd-8fef-a593ad031dc1" Title="RouteeSMSClient" Url="html/N_RouteeSMSClient.htm">
-    <HelpTOCNode Id="418c5539-bf3a-437f-8b60-afbb9d571277" Title="SmsClient Class" Url="html/T_RouteeSMSClient_SmsClient.htm">
-      <HelpTOCNode Title="SmsClient Constructor " Url="html/M_RouteeSMSClient_SmsClient__ctor.htm" />
-      <HelpTOCNode Id="00a6e93d-9c1f-4833-88b5-c7059e42575d" Title="SmsClient Properties" Url="html/Properties_T_RouteeSMSClient_SmsClient.htm">
+  <HelpTOCNode Id="10d9b7fd-332e-4b13-b559-1cc12a40ec0e" Title="RouteeSMSClient" Url="html/N_RouteeSMSClient.htm">
+    <HelpTOCNode Id="a08b07b7-71da-425d-9403-8e2aef8f4147" Title="SmsClient Class" Url="html/T_RouteeSMSClient_SmsClient.htm">
+      <HelpTOCNode Id="06197896-b0d7-4247-ba67-9bdbe50f06bd" Title="SmsClient Constructor " Url="html/Overload_RouteeSMSClient_SmsClient__ctor.htm">
+        <HelpTOCNode Title="SmsClient Constructor " Url="html/M_RouteeSMSClient_SmsClient__ctor.htm" />
+        <HelpTOCNode Title="SmsClient Constructor (ClientOptions)" Url="html/M_RouteeSMSClient_SmsClient__ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="75da9970-6d48-4c3e-a238-a985022ca930" Title="SmsClient Properties" Url="html/Properties_T_RouteeSMSClient_SmsClient.htm">
+        <HelpTOCNode Title="AuthorizeUri Property " Url="html/P_RouteeSMSClient_SmsClient_AuthorizeUri.htm" />
+        <HelpTOCNode Title="Options Property " Url="html/P_RouteeSMSClient_SmsClient_Options.htm" />
+        <HelpTOCNode Title="SmsUri Property " Url="html/P_RouteeSMSClient_SmsClient_SmsUri.htm" />
         <HelpTOCNode Title="Token Property " Url="html/P_RouteeSMSClient_SmsClient_Token.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="216cbae9-b21b-4134-85a1-b56ac0289caa" Title="SmsClient Methods" Url="html/Methods_T_RouteeSMSClient_SmsClient.htm">
+      <HelpTOCNode Id="b6d039d6-85c7-4a1f-a2db-0f78fadf5d1a" Title="SmsClient Methods" Url="html/Methods_T_RouteeSMSClient_SmsClient.htm">
         <HelpTOCNode Title="AuthorizeAsync Method " Url="html/M_RouteeSMSClient_SmsClient_AuthorizeAsync.htm" />
         <HelpTOCNode Title="OnAuthorizationFailed Method " Url="html/M_RouteeSMSClient_SmsClient_OnAuthorizationFailed.htm" />
+        <HelpTOCNode Title="OnSmSfailed Method " Url="html/M_RouteeSMSClient_SmsClient_OnSmSfailed.htm" />
+        <HelpTOCNode Title="OnSmsSent Method " Url="html/M_RouteeSMSClient_SmsClient_OnSmsSent.htm" />
         <HelpTOCNode Title="SendSmsAsync Method " Url="html/M_RouteeSMSClient_SmsClient_SendSmsAsync.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="6d5949b7-215a-4e46-90d4-5bb1607745e1" Title="SmsClient Events" Url="html/Events_T_RouteeSMSClient_SmsClient.htm">
+      <HelpTOCNode Id="e6005d69-29e5-4a7d-9d28-97a21800439b" Title="SmsClient Events" Url="html/Events_T_RouteeSMSClient_SmsClient.htm">
         <HelpTOCNode Title="AuthorizationFailed Event" Url="html/E_RouteeSMSClient_SmsClient_AuthorizationFailed.htm" />
+        <HelpTOCNode Title="SmSfailed Event" Url="html/E_RouteeSMSClient_SmsClient_SmSfailed.htm" />
+        <HelpTOCNode Title="SmsSent Event" Url="html/E_RouteeSMSClient_SmsClient_SmsSent.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="db7cb5f7-0d7a-4287-bb0e-7627f7664637" Title="RouteeSMSClient.Interfaces" Url="html/N_RouteeSMSClient_Interfaces.htm">
+  <HelpTOCNode Id="4856c5fb-4866-45d2-82c2-e6eff3f1c771" Title="RouteeSMSClient.Interfaces" Url="html/N_RouteeSMSClient_Interfaces.htm">
     <HelpTOCNode Title="IAuthorizationResult Interface" Url="html/T_RouteeSMSClient_Interfaces_IAuthorizationResult.htm" />
-    <HelpTOCNode Title="IServiceCredentialStore Interface" Url="html/T_RouteeSMSClient_Interfaces_IServiceCredentialStore.htm" />
-    <HelpTOCNode Id="464cc898-dd7f-4a87-8820-5b0021dd68af" Title="ISmsClient(T1, T2) Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_2.htm">
-      <HelpTOCNode Id="9be31f04-a709-4b10-a8a9-a3b8d87e4d72" Title="ISmsClient(T1, T2) Methods" Url="html/Methods_T_RouteeSMSClient_Interfaces_ISmsClient_2.htm">
-        <HelpTOCNode Title="AuthorizeAsync Method " Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_2_AuthorizeAsync.htm" />
-        <HelpTOCNode Title="SendSmsAsync Method " Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_2_SendSmsAsync.htm" />
+    <HelpTOCNode Id="f411f395-07ec-4b69-acf9-746693619210" Title="IOauthAuthorizer(T) Interface" Url="html/T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm">
+      <HelpTOCNode Id="d7db9aaa-d3d9-453d-bf92-1eaef124baf2" Title="IOauthAuthorizer(T) Methods" Url="html/Methods_T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm">
+        <HelpTOCNode Title="AuthorizeAsync Method " Url="html/M_RouteeSMSClient_Interfaces_IOauthAuthorizer_1_AuthorizeAsync.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="87b0ad67-bcb2-440f-91a4-345653f12807" Title="ISmsClient(T1, T2) Events" Url="html/Events_T_RouteeSMSClient_Interfaces_ISmsClient_2.htm">
-        <HelpTOCNode Title="AuthorizationFailed Event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_2_AuthorizationFailed.htm" />
+      <HelpTOCNode Id="88c60f98-2f4b-4a91-873c-712c9b3a0a7f" Title="IOauthAuthorizer(T) Events" Url="html/Events_T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm">
+        <HelpTOCNode Title="AuthorizationFailed Event" Url="html/E_RouteeSMSClient_Interfaces_IOauthAuthorizer_1_AuthorizationFailed.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2ad4c7ce-d430-4539-83d1-80e34c671803" Title="ISmsClientResult(T) Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClientResult_1.htm">
-      <HelpTOCNode Id="9b11784f-8125-4bfb-a8bb-d5b4e02ecd90" Title="ISmsClientResult(T) Properties" Url="html/Properties_T_RouteeSMSClient_Interfaces_ISmsClientResult_1.htm">
-        <HelpTOCNode Title="Result Property " Url="html/P_RouteeSMSClient_Interfaces_ISmsClientResult_1_Result.htm" />
+    <HelpTOCNode Title="IOptions Interface" Url="html/T_RouteeSMSClient_Interfaces_IOptions.htm" />
+    <HelpTOCNode Id="bfd3e1f6-1986-497e-8577-512ff7d58d92" Title="IServiceCredentialStoreOauth Interface" Url="html/T_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth.htm">
+      <HelpTOCNode Id="561851ca-3232-4c01-8c62-4be8a4a8dd2e" Title="IServiceCredentialStoreOauth Properties" Url="html/Properties_T_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth.htm">
+        <HelpTOCNode Title="ApplicationId Property " Url="html/P_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth_ApplicationId.htm" />
+        <HelpTOCNode Title="ApplicationSecret Property " Url="html/P_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth_ApplicationSecret.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
+    <HelpTOCNode Id="9e581d46-7609-407f-a8c5-f63178618d0e" Title="ISmsClient(T) Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_1.htm">
+      <HelpTOCNode Id="e77d7c40-8fe7-4987-b935-28166079e336" Title="ISmsClient(T) Methods" Url="html/Methods_T_RouteeSMSClient_Interfaces_ISmsClient_1.htm">
+        <HelpTOCNode Title="SendSmsAsync Method " Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_1_SendSmsAsync.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a06c3e32-60b1-447e-98ae-0e4c205174f7" Title="ISmsClient(T) Events" Url="html/Events_T_RouteeSMSClient_Interfaces_ISmsClient_1.htm">
+        <HelpTOCNode Title="SmSfailed Event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_1_SmSfailed.htm" />
+        <HelpTOCNode Title="SmsSent Event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_1_SmsSent.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="ISmsClientResult Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClientResult.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="1501de35-a06b-4b8c-943c-2c5a592a79aa" Title="RouteeSMSClient.RouteeBase" Url="html/N_RouteeSMSClient_RouteeBase.htm">
-    <HelpTOCNode Id="689240e0-3477-41b5-82c6-b93cec81a200" Title="AuthorizationToken Class" Url="html/T_RouteeSMSClient_RouteeBase_AuthorizationToken.htm">
+  <HelpTOCNode Id="9266d485-f945-4ef4-aeca-6abc1205e723" Title="RouteeSMSClient.RouteeBase" Url="html/N_RouteeSMSClient_RouteeBase.htm">
+    <HelpTOCNode Id="9164689c-795e-4d44-8f22-7cd596908299" Title="AuthorizationToken Class" Url="html/T_RouteeSMSClient_RouteeBase_AuthorizationToken.htm">
       <HelpTOCNode Title="AuthorizationToken Constructor " Url="html/M_RouteeSMSClient_RouteeBase_AuthorizationToken__ctor.htm" />
+      <HelpTOCNode Id="dbd4f4db-0003-4dcc-95b3-c93c10bed84e" Title="AuthorizationToken Properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_AuthorizationToken.htm">
+        <HelpTOCNode Title="access_token Property " Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_access_token.htm" />
+        <HelpTOCNode Title="expires_in Property " Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_expires_in.htm" />
+        <HelpTOCNode Title="permissions Property " Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_permissions.htm" />
+        <HelpTOCNode Title="scope Property " Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_scope.htm" />
+        <HelpTOCNode Title="token_type Property " Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_token_type.htm" />
+      </HelpTOCNode>
       <HelpTOCNode Title="AuthorizationToken Methods" Url="html/Methods_T_RouteeSMSClient_RouteeBase_AuthorizationToken.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="a7e61aa1-9675-40f6-8b97-225861632bd2" Title="Credentials Class" Url="html/T_RouteeSMSClient_RouteeBase_Credentials.htm">
-      <HelpTOCNode Id="59abce31-eadd-4510-a103-8d52a8e6d552" Title="Credentials Constructor " Url="html/Overload_RouteeSMSClient_RouteeBase_Credentials__ctor.htm">
+    <HelpTOCNode Id="74a9c68d-5930-4d59-b24c-07e95d5b7c1b" Title="ClientOptions Class" Url="html/T_RouteeSMSClient_RouteeBase_ClientOptions.htm">
+      <HelpTOCNode Id="2132b691-3baf-4c1b-b18f-62e9646dc47b" Title="ClientOptions Constructor " Url="html/Overload_RouteeSMSClient_RouteeBase_ClientOptions__ctor.htm">
+        <HelpTOCNode Title="ClientOptions Constructor " Url="html/M_RouteeSMSClient_RouteeBase_ClientOptions__ctor.htm" />
+        <HelpTOCNode Title="ClientOptions Constructor (String, String)" Url="html/M_RouteeSMSClient_RouteeBase_ClientOptions__ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="61f8459c-48d2-42e4-8533-89df0dc31f66" Title="ClientOptions Properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_ClientOptions.htm">
+        <HelpTOCNode Title="CallBackUri Property " Url="html/P_RouteeSMSClient_RouteeBase_ClientOptions_CallBackUri.htm" />
+        <HelpTOCNode Title="Originator Property " Url="html/P_RouteeSMSClient_RouteeBase_ClientOptions_Originator.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ClientOptions Methods" Url="html/Methods_T_RouteeSMSClient_RouteeBase_ClientOptions.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="2e9e74ad-8234-4019-8283-656f1fe89e2c" Title="Credentials Class" Url="html/T_RouteeSMSClient_RouteeBase_Credentials.htm">
+      <HelpTOCNode Id="b94b9fcb-9fab-417d-989a-70014c9155c5" Title="Credentials Constructor " Url="html/Overload_RouteeSMSClient_RouteeBase_Credentials__ctor.htm">
         <HelpTOCNode Title="Credentials Constructor " Url="html/M_RouteeSMSClient_RouteeBase_Credentials__ctor.htm" />
         <HelpTOCNode Title="Credentials Constructor (String, String)" Url="html/M_RouteeSMSClient_RouteeBase_Credentials__ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9850396f-c272-4550-98db-5286255e3e6a" Title="Credentials Properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_Credentials.htm">
+      <HelpTOCNode Id="23d33540-33af-4a81-a43a-f45f02e0fd84" Title="Credentials Properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_Credentials.htm">
         <HelpTOCNode Title="ApplicationId Property " Url="html/P_RouteeSMSClient_RouteeBase_Credentials_ApplicationId.htm" />
         <HelpTOCNode Title="ApplicationSecret Property " Url="html/P_RouteeSMSClient_RouteeBase_Credentials_ApplicationSecret.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="Credentials Methods" Url="html/Methods_T_RouteeSMSClient_RouteeBase_Credentials.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="56c4be00-412e-499e-859c-18a129a7f694" Title="RouteeEventArgs Class" Url="html/T_RouteeSMSClient_RouteeBase_RouteeEventArgs.htm">
+    <HelpTOCNode Id="3d9e65c0-f49a-43ac-ad0b-588fbbd44ed9" Title="RouteeEventArgs Class" Url="html/T_RouteeSMSClient_RouteeBase_RouteeEventArgs.htm">
       <HelpTOCNode Title="RouteeEventArgs Constructor " Url="html/M_RouteeSMSClient_RouteeBase_RouteeEventArgs__ctor.htm" />
-      <HelpTOCNode Id="b30ca750-f447-4822-ac23-342bae072bb5" Title="RouteeEventArgs Properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_RouteeEventArgs.htm">
+      <HelpTOCNode Id="254f95d3-1a96-4849-bd69-cb6dbe59add4" Title="RouteeEventArgs Properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_RouteeEventArgs.htm">
         <HelpTOCNode Title="Data Property " Url="html/P_RouteeSMSClient_RouteeBase_RouteeEventArgs_Data.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="RouteeEventArgs Methods" Url="html/Methods_T_RouteeSMSClient_RouteeBase_RouteeEventArgs.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="3892e43b-c3ac-4488-b054-ab3fc9ca0978" Title="SmSResult Class" Url="html/T_RouteeSMSClient_RouteeBase_SmSResult.htm">
+    <HelpTOCNode Id="303b4f42-c7ad-4562-8533-4b056dda5689" Title="SmSResult Class" Url="html/T_RouteeSMSClient_RouteeBase_SmSResult.htm">
       <HelpTOCNode Title="SmSResult Constructor " Url="html/M_RouteeSMSClient_RouteeBase_SmSResult__ctor.htm" />
-      <HelpTOCNode Id="2343f0fc-89a1-4107-af04-2b9d39d3c53c" Title="SmSResult Properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_SmSResult.htm">
+      <HelpTOCNode Id="63772865-4571-4836-ba55-8e11cebfd01e" Title="SmSResult Properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_SmSResult.htm">
         <HelpTOCNode Title="Body Property " Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_Body.htm" />
         <HelpTOCNode Title="CreatedAt Property " Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_CreatedAt.htm" />
         <HelpTOCNode Title="From Property " Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_From.htm" />

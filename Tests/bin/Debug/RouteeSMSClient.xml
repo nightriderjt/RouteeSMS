@@ -14,12 +14,45 @@
              Holds the application ID and Secret for Oauth Token authentication
             </summary>
         </member>
+        <member name="T:RouteeSMSClient.Interfaces.ISmsClient`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
         <member name="M:RouteeSMSClient.Interfaces.ISmsClient`1.SendSmsAsync(System.String,System.String)">
             <summary>
             Sends the SMS asynchronous.
             </summary>
             <param name="recipientNumber">The recipient number.</param>
             <param name="message">The message.</param>
+            <returns></returns>
+        </member>
+        <member name="E:RouteeSMSClient.Interfaces.ISmsClient`1.SmSfailed">
+            <summary>
+            Occurs when [on sms failed].
+            </summary>
+        </member>
+        <member name="E:RouteeSMSClient.Interfaces.ISmsClient`1.SmsSent">
+            <summary>
+            Occurs when [on SMS sent].
+            </summary>
+        </member>
+        <member name="T:RouteeSMSClient.Interfaces.ISmsClientResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:RouteeSMSClient.Interfaces.IOauthAuthorizer`1">
+            <summary>
+            Performs Oauth authorization 
+            </summary>
+        </member>
+        <member name="M:RouteeSMSClient.Interfaces.IOauthAuthorizer`1.AuthorizeAsync(RouteeSMSClient.Interfaces.IServiceCredentialStoreOauth)">
+            <summary>
+            Authorizes  asynchronous.
+            </summary>
+            <param name="credentials">The credentials.</param>
             <returns></returns>
         </member>
         <member name="E:RouteeSMSClient.Interfaces.IOauthAuthorizer`1.AuthorizationFailed">
@@ -78,6 +111,37 @@
             The permissions.
             </value>
         </member>
+        <member name="T:RouteeSMSClient.RouteeBase.ClientOptions">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:RouteeSMSClient.Interfaces.IOptions" />
+            <inheritdoc />
+        </member>
+        <member name="M:RouteeSMSClient.RouteeBase.ClientOptions.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RouteeSMSClient.RouteeBase.ClientOptions" /> class.
+            </summary>
+            <param name="callBackUri">The call back URI.</param>
+            <param name="originator">The originator.</param>
+            <inheritdoc />
+        </member>
+        <member name="P:RouteeSMSClient.RouteeBase.ClientOptions.CallBackUri">
+            <summary>
+            Gets or sets the call back URI.
+            </summary>
+            <value>
+            The call back URI.
+            </value>
+        </member>
+        <member name="P:RouteeSMSClient.RouteeBase.ClientOptions.Originator">
+            <summary>
+            Gets or sets the originator.
+            </summary>
+            <value>
+            The originator.
+            </value>
+        </member>
         <member name="T:RouteeSMSClient.RouteeBase.Credentials">
             <summary>
             The Oauth credentials for Routee SMS application for authentication
@@ -115,10 +179,24 @@
         </member>
         <member name="P:RouteeSMSClient.SmsClient.Token">
             <summary>
+            Gets or sets the options.
+            </summary>
+            <value>
+            The options.
+            </value>
+            <summary>
             Gets or sets the token.
             </summary>
             <value>
             The token.
+            </value>
+        </member>
+        <member name="P:RouteeSMSClient.SmsClient.Options">
+            <summary>
+            Gets the options.
+            </summary>
+            <value>
+            The options.
             </value>
         </member>
         <member name="M:RouteeSMSClient.SmsClient.#ctor">
@@ -131,7 +209,44 @@
             Authorizes the client
             </summary>
             <param name="credentials">The credentials.</param>
-            <returns cref="T:RouteeSMSClient.RouteeBase.AuthorizationToken"> an autorization token object or null in case of failure</returns>
+            <returns cref="T:RouteeSMSClient.RouteeBase.AuthorizationToken"> an authorization token object or null in case of failure</returns>
+        </member>
+        <member name="E:RouteeSMSClient.SmsClient.AuthorizationFailed">
+            <inheritdoc />
+        </member>
+        <member name="M:RouteeSMSClient.SmsClient.SendSmsAsync(System.String,System.String)">
+            <summary>
+            Sends the SMS asynchronous.
+            </summary>
+            <param name="recipientNumber">The recipient number.</param>
+            <param name="message">The message.</param>
+            <returns cref="T:RouteeSMSClient.RouteeBase.SmSResult"> an SMSreuslt or null in case of failure</returns>
+        </member>
+        <member name="E:RouteeSMSClient.SmsClient.SmSfailed">
+            <inheritdoc />
+        </member>
+        <member name="E:RouteeSMSClient.SmsClient.SmsSent">
+            <summary>
+            Occurs when [on SMS sent].
+            </summary>
+        </member>
+        <member name="M:RouteeSMSClient.SmsClient.OnAuthorizationFailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)">
+            <summary>
+            Raises the <see cref="E:AuthorizationFailed" /> event.
+            </summary>
+            <param name="e">The <see cref="T:RouteeSMSClient.RouteeBase.RouteeEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:RouteeSMSClient.SmsClient.OnSmSfailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)">
+            <summary>
+            Raises the <see cref="E:OnSmSfailed" /> event.
+            </summary>
+            <param name="e">The <see cref="T:RouteeSMSClient.RouteeBase.RouteeEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:RouteeSMSClient.SmsClient.OnSmsSent(RouteeSMSClient.RouteeBase.RouteeEventArgs)">
+            <summary>
+            Raises the <see cref="E:OnSmsSent" /> event.
+            </summary>
+            <param name="e">The <see cref="T:RouteeSMSClient.RouteeBase.RouteeEventArgs"/> instance containing the event data.</param>
         </member>
     </members>
 </doc>

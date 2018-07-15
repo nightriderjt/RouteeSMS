@@ -5,14 +5,23 @@ using System.Threading.Tasks;
 
 namespace RouteeSMSClient.Interfaces
 {
-    interface IOauthAuthorizer<in T> where T:class
+
+    /// <summary>
+    /// Performs Oauth authorization 
+    /// </summary>
+    public interface IOauthAuthorizer<T>
     {
 
-        Task<IAuthorizationResult> AuthorizeAsync(T credentials);
+        /// <summary>
+        /// Authorizes  asynchronous.
+        /// </summary>
+        /// <param name="credentials">The credentials.</param>
+        /// <returns></returns>
+        Task<IAuthorizationResult> AuthorizeAsync(IServiceCredentialStoreOauth credentials);
         /// <summary>
         /// Occurs when [authorization failed].
         /// </summary>
-        event EventHandler AuthorizationFailed;
+        event EventHandler<T> AuthorizationFailed;
 
     }
 }

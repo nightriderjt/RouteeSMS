@@ -2,8 +2,11 @@
 
 namespace RouteeSMSClient.Interfaces
 {
-   public interface ISmsClientResult<T>
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface ISmsClientResult
     {
-        T Result { get; set; }
+       
     }
 }

@@ -4,7 +4,11 @@ using System.Threading.Tasks;
 
 namespace RouteeSMSClient.Interfaces
 {
-  public  interface ISmsClient<T1>
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public interface ISmsClient<T>
     {
         /// <summary>
         /// Sends the SMS asynchronous.
@@ -12,9 +16,19 @@ namespace RouteeSMSClient.Interfaces
         /// <param name="recipientNumber">The recipient number.</param>
         /// <param name="message">The message.</param>
         /// <returns></returns>
-        Task<ISmsClientResult<T1>> SendSmsAsync(string recipientNumber, string message);
-       
+        Task<ISmsClientResult> SendSmsAsync(string recipientNumber, string message);
+
+        /// <summary>
+        /// Occurs when [on sms failed].
+        /// </summary>
+        event EventHandler<T>  SmSfailed ;
+
+        /// <summary>
+        /// Occurs when [on SMS sent].
+        /// </summary>
+        event EventHandler<T> SmsSent;
     }
+}
 
    
-}
+

@@ -1,22 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
-  <HelpKINode Title="ApplicationId property" Url="html/P_RouteeSMSClient_RouteeBase_Credentials_ApplicationId.htm" />
-  <HelpKINode Title="ApplicationSecret property" Url="html/P_RouteeSMSClient_RouteeBase_Credentials_ApplicationSecret.htm" />
+  <HelpKINode Title="access_token property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_access_token.htm" />
+  <HelpKINode Title="ApplicationId property">
+    <HelpKINode Title="Credentials.ApplicationId Property " Url="html/P_RouteeSMSClient_RouteeBase_Credentials_ApplicationId.htm" />
+    <HelpKINode Title="IServiceCredentialStoreOauth.ApplicationId Property " Url="html/P_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth_ApplicationId.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApplicationSecret property">
+    <HelpKINode Title="Credentials.ApplicationSecret Property " Url="html/P_RouteeSMSClient_RouteeBase_Credentials_ApplicationSecret.htm" />
+    <HelpKINode Title="IServiceCredentialStoreOauth.ApplicationSecret Property " Url="html/P_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth_ApplicationSecret.htm" />
+  </HelpKINode>
   <HelpKINode Title="AuthorizationFailed event">
-    <HelpKINode Title="ISmsClient(T1, T2).AuthorizationFailed Event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_2_AuthorizationFailed.htm" />
+    <HelpKINode Title="IOauthAuthorizer(T).AuthorizationFailed Event" Url="html/E_RouteeSMSClient_Interfaces_IOauthAuthorizer_1_AuthorizationFailed.htm" />
     <HelpKINode Title="SmsClient.AuthorizationFailed Event" Url="html/E_RouteeSMSClient_SmsClient_AuthorizationFailed.htm" />
   </HelpKINode>
   <HelpKINode Title="AuthorizationToken class">
     <HelpKINode Title="AuthorizationToken Class" Url="html/T_RouteeSMSClient_RouteeBase_AuthorizationToken.htm" />
     <HelpKINode Title="constructor" Url="html/M_RouteeSMSClient_RouteeBase_AuthorizationToken__ctor.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_RouteeSMSClient_RouteeBase_AuthorizationToken.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_AuthorizationToken.htm" />
   </HelpKINode>
+  <HelpKINode Title="AuthorizationToken.access_token property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_access_token.htm" />
   <HelpKINode Title="AuthorizationToken.AuthorizationToken constructor" Url="html/M_RouteeSMSClient_RouteeBase_AuthorizationToken__ctor.htm" />
+  <HelpKINode Title="AuthorizationToken.expires_in property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_expires_in.htm" />
+  <HelpKINode Title="AuthorizationToken.permissions property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_permissions.htm" />
+  <HelpKINode Title="AuthorizationToken.scope property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_scope.htm" />
+  <HelpKINode Title="AuthorizationToken.token_type property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_token_type.htm" />
   <HelpKINode Title="AuthorizeAsync method">
-    <HelpKINode Title="ISmsClient(T1, T2).AuthorizeAsync Method " Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_2_AuthorizeAsync.htm" />
+    <HelpKINode Title="IOauthAuthorizer(T).AuthorizeAsync Method " Url="html/M_RouteeSMSClient_Interfaces_IOauthAuthorizer_1_AuthorizeAsync.htm" />
     <HelpKINode Title="SmsClient.AuthorizeAsync Method " Url="html/M_RouteeSMSClient_SmsClient_AuthorizeAsync.htm" />
   </HelpKINode>
+  <HelpKINode Title="AuthorizeUri property" Url="html/P_RouteeSMSClient_SmsClient_AuthorizeUri.htm" />
   <HelpKINode Title="Body property" Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_Body.htm" />
+  <HelpKINode Title="CallBackUri property" Url="html/P_RouteeSMSClient_RouteeBase_ClientOptions_CallBackUri.htm" />
+  <HelpKINode Title="ClientOptions class">
+    <HelpKINode Title="ClientOptions Class" Url="html/T_RouteeSMSClient_RouteeBase_ClientOptions.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_RouteeSMSClient_RouteeBase_ClientOptions__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_RouteeSMSClient_RouteeBase_ClientOptions.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_RouteeSMSClient_RouteeBase_ClientOptions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ClientOptions.CallBackUri property" Url="html/P_RouteeSMSClient_RouteeBase_ClientOptions_CallBackUri.htm" />
+  <HelpKINode Title="ClientOptions.ClientOptions constructor" Url="html/Overload_RouteeSMSClient_RouteeBase_ClientOptions__ctor.htm" />
+  <HelpKINode Title="ClientOptions.Originator property" Url="html/P_RouteeSMSClient_RouteeBase_ClientOptions_Originator.htm" />
   <HelpKINode Title="CreatedAt property" Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_CreatedAt.htm" />
   <HelpKINode Title="Credentials class">
     <HelpKINode Title="Credentials Class" Url="html/T_RouteeSMSClient_RouteeBase_Credentials.htm" />
@@ -28,37 +52,53 @@
   <HelpKINode Title="Credentials.ApplicationSecret property" Url="html/P_RouteeSMSClient_RouteeBase_Credentials_ApplicationSecret.htm" />
   <HelpKINode Title="Credentials.Credentials constructor" Url="html/Overload_RouteeSMSClient_RouteeBase_Credentials__ctor.htm" />
   <HelpKINode Title="Data property" Url="html/P_RouteeSMSClient_RouteeBase_RouteeEventArgs_Data.htm" />
+  <HelpKINode Title="expires_in property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_expires_in.htm" />
   <HelpKINode Title="From property" Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_From.htm" />
   <HelpKINode Title="IAuthorizationResult interface" Url="html/T_RouteeSMSClient_Interfaces_IAuthorizationResult.htm" />
-  <HelpKINode Title="IServiceCredentialStore interface" Url="html/T_RouteeSMSClient_Interfaces_IServiceCredentialStore.htm" />
-  <HelpKINode Title="ISmsClient(Of T1, T2) interface">
-    <HelpKINode Title="ISmsClient(T1, T2) Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_2.htm" />
-    <HelpKINode Title="events" Url="html/Events_T_RouteeSMSClient_Interfaces_ISmsClient_2.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_RouteeSMSClient_Interfaces_ISmsClient_2.htm" />
+  <HelpKINode Title="IOauthAuthorizer(Of T) interface">
+    <HelpKINode Title="IOauthAuthorizer(T) Interface" Url="html/T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm" />
   </HelpKINode>
-  <HelpKINode Title="ISmsClient(Of T1, T2).AuthorizationFailed event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_2_AuthorizationFailed.htm" />
-  <HelpKINode Title="ISmsClient(Of T1, T2).AuthorizeAsync method" Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_2_AuthorizeAsync.htm" />
-  <HelpKINode Title="ISmsClient(Of T1, T2).SendSmsAsync method" Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_2_SendSmsAsync.htm" />
-  <HelpKINode Title="ISmsClient&lt;T1, T2&gt; interface">
-    <HelpKINode Title="ISmsClient(T1, T2) Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_2.htm" />
-    <HelpKINode Title="events" Url="html/Events_T_RouteeSMSClient_Interfaces_ISmsClient_2.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_RouteeSMSClient_Interfaces_ISmsClient_2.htm" />
+  <HelpKINode Title="IOauthAuthorizer(Of T).AuthorizationFailed event" Url="html/E_RouteeSMSClient_Interfaces_IOauthAuthorizer_1_AuthorizationFailed.htm" />
+  <HelpKINode Title="IOauthAuthorizer(Of T).AuthorizeAsync method" Url="html/M_RouteeSMSClient_Interfaces_IOauthAuthorizer_1_AuthorizeAsync.htm" />
+  <HelpKINode Title="IOauthAuthorizer&lt;T&gt; interface">
+    <HelpKINode Title="IOauthAuthorizer(T) Interface" Url="html/T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm" />
   </HelpKINode>
-  <HelpKINode Title="ISmsClient&lt;T1, T2&gt;.AuthorizationFailed event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_2_AuthorizationFailed.htm" />
-  <HelpKINode Title="ISmsClient&lt;T1, T2&gt;.AuthorizeAsync method" Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_2_AuthorizeAsync.htm" />
-  <HelpKINode Title="ISmsClient&lt;T1, T2&gt;.SendSmsAsync method" Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_2_SendSmsAsync.htm" />
-  <HelpKINode Title="ISmsClientResult(Of T) interface">
-    <HelpKINode Title="ISmsClientResult(T) Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClientResult_1.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_RouteeSMSClient_Interfaces_ISmsClientResult_1.htm" />
+  <HelpKINode Title="IOauthAuthorizer&lt;T&gt;.AuthorizationFailed event" Url="html/E_RouteeSMSClient_Interfaces_IOauthAuthorizer_1_AuthorizationFailed.htm" />
+  <HelpKINode Title="IOauthAuthorizer&lt;T&gt;.AuthorizeAsync method" Url="html/M_RouteeSMSClient_Interfaces_IOauthAuthorizer_1_AuthorizeAsync.htm" />
+  <HelpKINode Title="IOptions interface" Url="html/T_RouteeSMSClient_Interfaces_IOptions.htm" />
+  <HelpKINode Title="IServiceCredentialStoreOauth interface">
+    <HelpKINode Title="IServiceCredentialStoreOauth Interface" Url="html/T_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth.htm" />
   </HelpKINode>
-  <HelpKINode Title="ISmsClientResult(Of T).Result property" Url="html/P_RouteeSMSClient_Interfaces_ISmsClientResult_1_Result.htm" />
-  <HelpKINode Title="ISmsClientResult&lt;T&gt; interface">
-    <HelpKINode Title="ISmsClientResult(T) Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClientResult_1.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_RouteeSMSClient_Interfaces_ISmsClientResult_1.htm" />
+  <HelpKINode Title="IServiceCredentialStoreOauth.ApplicationId property" Url="html/P_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth_ApplicationId.htm" />
+  <HelpKINode Title="IServiceCredentialStoreOauth.ApplicationSecret property" Url="html/P_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth_ApplicationSecret.htm" />
+  <HelpKINode Title="ISmsClient(Of T) interface">
+    <HelpKINode Title="ISmsClient(T) Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_1.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_RouteeSMSClient_Interfaces_ISmsClient_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_RouteeSMSClient_Interfaces_ISmsClient_1.htm" />
   </HelpKINode>
-  <HelpKINode Title="ISmsClientResult&lt;T&gt;.Result property" Url="html/P_RouteeSMSClient_Interfaces_ISmsClientResult_1_Result.htm" />
+  <HelpKINode Title="ISmsClient(Of T).SendSmsAsync method" Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_1_SendSmsAsync.htm" />
+  <HelpKINode Title="ISmsClient(Of T).SmSfailed event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_1_SmSfailed.htm" />
+  <HelpKINode Title="ISmsClient(Of T).SmsSent event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_1_SmsSent.htm" />
+  <HelpKINode Title="ISmsClient&lt;T&gt; interface">
+    <HelpKINode Title="ISmsClient(T) Interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_1.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_RouteeSMSClient_Interfaces_ISmsClient_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_RouteeSMSClient_Interfaces_ISmsClient_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ISmsClient&lt;T&gt;.SendSmsAsync method" Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_1_SendSmsAsync.htm" />
+  <HelpKINode Title="ISmsClient&lt;T&gt;.SmSfailed event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_1_SmSfailed.htm" />
+  <HelpKINode Title="ISmsClient&lt;T&gt;.SmsSent event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_1_SmsSent.htm" />
+  <HelpKINode Title="ISmsClientResult interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClientResult.htm" />
   <HelpKINode Title="OnAuthorizationFailed method" Url="html/M_RouteeSMSClient_SmsClient_OnAuthorizationFailed.htm" />
-  <HelpKINode Title="Result property" Url="html/P_RouteeSMSClient_Interfaces_ISmsClientResult_1_Result.htm" />
+  <HelpKINode Title="OnSmSfailed method" Url="html/M_RouteeSMSClient_SmsClient_OnSmSfailed.htm" />
+  <HelpKINode Title="OnSmsSent method" Url="html/M_RouteeSMSClient_SmsClient_OnSmsSent.htm" />
+  <HelpKINode Title="Options property" Url="html/P_RouteeSMSClient_SmsClient_Options.htm" />
+  <HelpKINode Title="Originator property" Url="html/P_RouteeSMSClient_RouteeBase_ClientOptions_Originator.htm" />
+  <HelpKINode Title="permissions property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_permissions.htm" />
   <HelpKINode Title="RouteeEventArgs class">
     <HelpKINode Title="RouteeEventArgs Class" Url="html/T_RouteeSMSClient_RouteeBase_RouteeEventArgs.htm" />
     <HelpKINode Title="constructor" Url="html/M_RouteeSMSClient_RouteeBase_RouteeEventArgs__ctor.htm" />
@@ -70,34 +110,49 @@
   <HelpKINode Title="RouteeSMSClient namespace" Url="html/N_RouteeSMSClient.htm" />
   <HelpKINode Title="RouteeSMSClient.Interfaces namespace" Url="html/N_RouteeSMSClient_Interfaces.htm" />
   <HelpKINode Title="RouteeSMSClient.Interfaces.IAuthorizationResult interface" Url="html/T_RouteeSMSClient_Interfaces_IAuthorizationResult.htm" />
-  <HelpKINode Title="RouteeSMSClient.Interfaces.IServiceCredentialStore interface" Url="html/T_RouteeSMSClient_Interfaces_IServiceCredentialStore.htm" />
-  <HelpKINode Title="RouteeSMSClient.Interfaces.ISmsClient(Of T1, T2) interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_2.htm" />
-  <HelpKINode Title="RouteeSMSClient.Interfaces.ISmsClient&lt;T1, T2&gt; interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_2.htm" />
-  <HelpKINode Title="RouteeSMSClient.Interfaces.ISmsClientResult(Of T) interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClientResult_1.htm" />
-  <HelpKINode Title="RouteeSMSClient.Interfaces.ISmsClientResult&lt;T&gt; interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClientResult_1.htm" />
+  <HelpKINode Title="RouteeSMSClient.Interfaces.IOauthAuthorizer(Of T) interface" Url="html/T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm" />
+  <HelpKINode Title="RouteeSMSClient.Interfaces.IOauthAuthorizer&lt;T&gt; interface" Url="html/T_RouteeSMSClient_Interfaces_IOauthAuthorizer_1.htm" />
+  <HelpKINode Title="RouteeSMSClient.Interfaces.IOptions interface" Url="html/T_RouteeSMSClient_Interfaces_IOptions.htm" />
+  <HelpKINode Title="RouteeSMSClient.Interfaces.IServiceCredentialStoreOauth interface" Url="html/T_RouteeSMSClient_Interfaces_IServiceCredentialStoreOauth.htm" />
+  <HelpKINode Title="RouteeSMSClient.Interfaces.ISmsClient(Of T) interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_1.htm" />
+  <HelpKINode Title="RouteeSMSClient.Interfaces.ISmsClient&lt;T&gt; interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClient_1.htm" />
+  <HelpKINode Title="RouteeSMSClient.Interfaces.ISmsClientResult interface" Url="html/T_RouteeSMSClient_Interfaces_ISmsClientResult.htm" />
   <HelpKINode Title="RouteeSMSClient.RouteeBase namespace" Url="html/N_RouteeSMSClient_RouteeBase.htm" />
   <HelpKINode Title="RouteeSMSClient.RouteeBase.AuthorizationToken class" Url="html/T_RouteeSMSClient_RouteeBase_AuthorizationToken.htm" />
+  <HelpKINode Title="RouteeSMSClient.RouteeBase.ClientOptions class" Url="html/T_RouteeSMSClient_RouteeBase_ClientOptions.htm" />
   <HelpKINode Title="RouteeSMSClient.RouteeBase.Credentials class" Url="html/T_RouteeSMSClient_RouteeBase_Credentials.htm" />
   <HelpKINode Title="RouteeSMSClient.RouteeBase.RouteeEventArgs class" Url="html/T_RouteeSMSClient_RouteeBase_RouteeEventArgs.htm" />
   <HelpKINode Title="RouteeSMSClient.RouteeBase.SmSResult class" Url="html/T_RouteeSMSClient_RouteeBase_SmSResult.htm" />
   <HelpKINode Title="RouteeSMSClient.SmsClient class" Url="html/T_RouteeSMSClient_SmsClient.htm" />
+  <HelpKINode Title="scope property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_scope.htm" />
   <HelpKINode Title="SendSmsAsync method">
-    <HelpKINode Title="ISmsClient(T1, T2).SendSmsAsync Method " Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_2_SendSmsAsync.htm" />
+    <HelpKINode Title="ISmsClient(T).SendSmsAsync Method " Url="html/M_RouteeSMSClient_Interfaces_ISmsClient_1_SendSmsAsync.htm" />
     <HelpKINode Title="SmsClient.SendSmsAsync Method " Url="html/M_RouteeSMSClient_SmsClient_SendSmsAsync.htm" />
   </HelpKINode>
   <HelpKINode Title="SmsClient class">
     <HelpKINode Title="SmsClient Class" Url="html/T_RouteeSMSClient_SmsClient.htm" />
-    <HelpKINode Title="constructor" Url="html/M_RouteeSMSClient_SmsClient__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_RouteeSMSClient_SmsClient__ctor.htm" />
     <HelpKINode Title="events" Url="html/Events_T_RouteeSMSClient_SmsClient.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_RouteeSMSClient_SmsClient.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_RouteeSMSClient_SmsClient.htm" />
   </HelpKINode>
   <HelpKINode Title="SmsClient.AuthorizationFailed event" Url="html/E_RouteeSMSClient_SmsClient_AuthorizationFailed.htm" />
   <HelpKINode Title="SmsClient.AuthorizeAsync method" Url="html/M_RouteeSMSClient_SmsClient_AuthorizeAsync.htm" />
+  <HelpKINode Title="SmsClient.AuthorizeUri property" Url="html/P_RouteeSMSClient_SmsClient_AuthorizeUri.htm" />
   <HelpKINode Title="SmsClient.OnAuthorizationFailed method" Url="html/M_RouteeSMSClient_SmsClient_OnAuthorizationFailed.htm" />
+  <HelpKINode Title="SmsClient.OnSmSfailed method" Url="html/M_RouteeSMSClient_SmsClient_OnSmSfailed.htm" />
+  <HelpKINode Title="SmsClient.OnSmsSent method" Url="html/M_RouteeSMSClient_SmsClient_OnSmsSent.htm" />
+  <HelpKINode Title="SmsClient.Options property" Url="html/P_RouteeSMSClient_SmsClient_Options.htm" />
   <HelpKINode Title="SmsClient.SendSmsAsync method" Url="html/M_RouteeSMSClient_SmsClient_SendSmsAsync.htm" />
-  <HelpKINode Title="SmsClient.SmsClient constructor" Url="html/M_RouteeSMSClient_SmsClient__ctor.htm" />
+  <HelpKINode Title="SmsClient.SmsClient constructor" Url="html/Overload_RouteeSMSClient_SmsClient__ctor.htm" />
+  <HelpKINode Title="SmsClient.SmSfailed event" Url="html/E_RouteeSMSClient_SmsClient_SmSfailed.htm" />
+  <HelpKINode Title="SmsClient.SmsSent event" Url="html/E_RouteeSMSClient_SmsClient_SmsSent.htm" />
+  <HelpKINode Title="SmsClient.SmsUri property" Url="html/P_RouteeSMSClient_SmsClient_SmsUri.htm" />
   <HelpKINode Title="SmsClient.Token property" Url="html/P_RouteeSMSClient_SmsClient_Token.htm" />
+  <HelpKINode Title="SmSfailed event">
+    <HelpKINode Title="ISmsClient(T).SmSfailed Event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_1_SmSfailed.htm" />
+    <HelpKINode Title="SmsClient.SmSfailed Event" Url="html/E_RouteeSMSClient_SmsClient_SmSfailed.htm" />
+  </HelpKINode>
   <HelpKINode Title="SmSResult class">
     <HelpKINode Title="SmSResult Class" Url="html/T_RouteeSMSClient_RouteeBase_SmSResult.htm" />
     <HelpKINode Title="constructor" Url="html/M_RouteeSMSClient_RouteeBase_SmSResult__ctor.htm" />
@@ -111,9 +166,15 @@
   <HelpKINode Title="SmSResult.Status property" Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_Status.htm" />
   <HelpKINode Title="SmSResult.To property" Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_To.htm" />
   <HelpKINode Title="SmSResult.TrackingId property" Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_TrackingId.htm" />
+  <HelpKINode Title="SmsSent event">
+    <HelpKINode Title="ISmsClient(T).SmsSent Event" Url="html/E_RouteeSMSClient_Interfaces_ISmsClient_1_SmsSent.htm" />
+    <HelpKINode Title="SmsClient.SmsSent Event" Url="html/E_RouteeSMSClient_SmsClient_SmsSent.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SmsUri property" Url="html/P_RouteeSMSClient_SmsClient_SmsUri.htm" />
   <HelpKINode Title="Status property" Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_Status.htm" />
   <HelpKINode Title="To property" Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_To.htm" />
   <HelpKINode Title="Token property" Url="html/P_RouteeSMSClient_SmsClient_Token.htm" />
+  <HelpKINode Title="token_type property" Url="html/P_RouteeSMSClient_RouteeBase_AuthorizationToken_token_type.htm" />
   <HelpKINode Title="TrackingId property" Url="html/P_RouteeSMSClient_RouteeBase_SmSResult_TrackingId.htm" />
   <HelpKINode Title="version">
     <HelpKINode Title="1.0.0.0" Url="html/61805e1c-c135-47f1-ab8a-92b28d3dff5c.htm" />
