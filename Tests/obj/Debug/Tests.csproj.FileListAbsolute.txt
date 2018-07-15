@@ -113,3 +113,4 @@ G:\Archive\Programmata\GitHub\RouteeSMS\Tests\obj\Debug\Tests.pdb
 G:\Archive\Programmata\GitHub\RouteeSMS\Tests\bin\Debug\RestSharp.dll
 G:\Archive\Programmata\GitHub\RouteeSMS\Tests\bin\Debug\Newtonsoft.Json.dll
 G:\Archive\Programmata\GitHub\RouteeSMS\Tests\bin\Debug\Newtonsoft.Json.xml
+G:\Archive\Programmata\GitHub\RouteeSMS\Tests\bin\Debug\RouteeSMSClient.xml

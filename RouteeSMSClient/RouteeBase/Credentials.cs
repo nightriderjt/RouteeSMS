@@ -4,9 +4,9 @@ using RouteeSMSClient.Interfaces;
 namespace RouteeSMSClient.RouteeBase
 {
     /// <summary>
-    /// 
+    /// The Oauth credentials for Routee SMS application for authentication
     /// </summary>
-    public class Credentials :IServiceCredentialStore
+    public class Credentials :IServiceCredentialStoreOauth
     {
         public Credentials()
         {
@@ -23,9 +23,19 @@ namespace RouteeSMSClient.RouteeBase
             ApplicationSecret = applicationSecret;
         }
 
+        /// <summary>
+        /// Gets or sets the application identifier.
+        /// </summary>
+        /// <value>
+        /// The application identifier.
+        /// </value>
         public string ApplicationId { get; set; }
+        /// <summary>
+        /// Gets or sets the application secret.
+        /// </summary>
+        /// <value>
+        /// The application secret.
+        /// </value>
         public string ApplicationSecret { get; set; }
-
-
     }
 }

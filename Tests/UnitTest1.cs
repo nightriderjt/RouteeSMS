@@ -7,7 +7,7 @@ namespace Tests
     [TestClass]
     public class UnitTest1
     {
-        private string _RouteeApplicationID { get; set; } = "5b4b0523e4b0d44c78c64ee6";
+        private string _RouteeApplicationID { get; set; } = "5b4b0523e4b0d44c78c64ee5";
         private string _RouteeApplicationSecret { get; set; } = "Nki0HA3WwY";
 
 
@@ -20,9 +20,9 @@ namespace Tests
 
             Client.AuthorizationFailed += Authenticationfailed;
             var aa = await Client.AuthorizeAsync(new RouteeSMSClient .RouteeBase .Credentials()
-                { ApplicationId = _RouteeApplicationID, ApplicationSecret = _RouteeApplicationSecret }
+                { ApplicationId  = _RouteeApplicationID, ApplicationSecret  = _RouteeApplicationSecret }
             );
-          
+            Assert.AreNotEqual(null, aa);
         }
 
     

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace RouteeSMSClient.Interfaces
 {
-  public  interface ISmsClient<T1, in T2>
+  public  interface ISmsClient<T1>
     {
         /// <summary>
         /// Sends the SMS asynchronous.
@@ -13,13 +13,7 @@ namespace RouteeSMSClient.Interfaces
         /// <param name="message">The message.</param>
         /// <returns></returns>
         Task<ISmsClientResult<T1>> SendSmsAsync(string recipientNumber, string message);
-      Task<IAuthorizationResult> AuthorizeAsync(T2 credentials);
-
-        /// <summary>
-        /// Occurs when [authorization failed].
-        /// </summary>
-        event EventHandler AuthorizationFailed;
-
+       
     }
 
    
