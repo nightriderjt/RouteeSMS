@@ -1,6 +1,6 @@
 ﻿
 
-namespace RouteeSMSClient.Interfaces
+namespace SMSInterfaces.Interfaces
 {
     /// <summary>
     ///  Holds the application ID and Secret for Oauth Token authentication

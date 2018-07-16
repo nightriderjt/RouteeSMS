@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-
-namespace RouteeSMSClient.Interfaces
+namespace SMSInterfaces.Interfaces
 {
     /// <summary>
     /// 

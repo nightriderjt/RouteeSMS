@@ -1,13 +1,14 @@
 ﻿
 using System.Collections.Generic;
-using RouteeSMSClient.Interfaces;
+using SMSInterfaces.Interfaces;
+
 
 namespace RouteeSMSClient.RouteeBase
 {
     /// <summary>
     /// 
     /// </summary>
-    /// <seealso cref="RouteeSMSClient.Interfaces.IAuthorizationResult" />
+    /// <seealso cref="IAuthorizationResult" />
     public class AuthorizationToken:IAuthorizationResult
     {
         /// <summary>

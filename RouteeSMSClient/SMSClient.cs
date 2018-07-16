@@ -4,12 +4,12 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
-using RouteeSMSClient.Interfaces;
 using RouteeSMSClient.RouteeBase;
+using SMSInterfaces.Interfaces;
 
 namespace RouteeSMSClient
 {
-    
+
     /// <summary>
     /// The Routee SMS Client
     /// </summary>
@@ -59,6 +59,7 @@ namespace RouteeSMSClient
 
     
 
+        /// <inheritdoc />
         /// <summary>
         /// Authorizes the client
         /// </summary>
@@ -129,7 +130,7 @@ namespace RouteeSMSClient
 
             if (response.IsSuccessful )
             {
-                RouteeBase.SmSResult result = Newtonsoft.Json.JsonConvert.DeserializeObject<RouteeBase.SmSResult>(response.Content);
+                SmSResult result = Newtonsoft.Json.JsonConvert.DeserializeObject<SmSResult>(response.Content);
                 RouteeEventArgs eventargs = new RouteeEventArgs {Data = result};
                 OnSmsSent(eventargs);
                 return result;

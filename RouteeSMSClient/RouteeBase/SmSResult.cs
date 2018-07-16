@@ -1,11 +1,16 @@
 ﻿using System;
-using RouteeSMSClient.Interfaces;
+
+using SMSInterfaces.Interfaces;
 
 
 namespace RouteeSMSClient.RouteeBase
 {
-   
-    public class SmSResult:ISmsClientResult 
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="SMSInterfaces.Interfaces.ISmsClientResult" />
+    public class SmSResult:ISmsClientResult
     {
         public string TrackingId { get; set; }
         public string Status { get; set; }
