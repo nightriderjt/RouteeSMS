@@ -1,2 +1,2 @@
 # RouteeSMS
-A .NET library to use the Routee SMS service
+A Net Standard 2 collection of SMS providers
