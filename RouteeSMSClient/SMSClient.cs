@@ -1,23 +1,25 @@
-﻿using System;
+﻿using RestSharp;
+using RouteeSMSClient.RouteeBase;
+using SMSInterfaces.Base;
+using SMSInterfaces.Enums;
+using SMSInterfaces.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using RestSharp;
-using RouteeSMSClient.RouteeBase;
-using SMSInterfaces.Enums;
-using SMSInterfaces.Interfaces;
 
 namespace RouteeSMSClient
 {
 
 
+
     /// <summary>
     /// 
     /// </summary>
-    /// <seealso cref="SMSInterfaces.Interfaces.ISmsClient{RouteeBase.RouteeEventArgs}" />
-    /// <seealso cref="SMSInterfaces.Interfaces.IOauthAuthorizer{RouteeBase.RouteeEventArgs}" />
-    public class SmsClient:ISmsClient<RouteeEventArgs >,IOauthAuthorizer<RouteeEventArgs>
+    /// <seealso cref="SMSInterfaces.Interfaces.ISmsClient" />
+    /// <seealso cref="SMSInterfaces.Interfaces.IOauthAuthorizer" />
+    public class SmsClient:ISmsClient,IOauthAuthorizer
     {
 
         private string AuthorizeUri { get;  } = "https://auth.routee.net/oauth/token";
@@ -63,14 +65,15 @@ namespace RouteeSMSClient
             Options =options;
         }
 
-    
+
 
         /// <inheritdoc />
         /// <summary>
         /// Authorizes the client
         /// </summary>
         /// <param name="credentials">The credentials.</param>
-        /// <returns cref="AuthorizationToken"> an authorization token object or null in case of failure</returns>
+        /// <returns cref="IAuthorizationResult"> an authorization token object or null in case of failure</returns>
+        /// /// <returns cref="AuthorizationToken "> an authorization token object or null in case of failure</returns>
         public async Task<IAuthorizationResult> AuthorizeAsync(IServiceCredentialStoreOauth   credentials)
         {
            
@@ -91,21 +94,25 @@ namespace RouteeSMSClient
             }
             else
             {
-                OnAuthorizationFailed(new RouteeEventArgs() { Data = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content) });
+                OnAuthorizationFailed(new SMSEventArgs() { Data = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content) });
                 Token.Status = AuthorizationStatus.Unauthorized ;
                 return null;
             }
         }
 
+        /// <summary>
+        /// Occurs when [authorization failed].
+        /// </summary>
         /// <inheritdoc />
-        public event EventHandler<RouteeEventArgs> AuthorizationFailed;
+        public event EventHandler<SMSEventArgs> AuthorizationFailed;
+
 
         /// <summary>
         /// Sends the SMS asynchronous.
         /// </summary>
         /// <param name="recipientNumber">The recipient number.</param>
         /// <param name="message">The message.</param>
-        /// <returns cref="SmSResult"> an SMSreuslt or null in case of failure</returns>
+        /// <returns cref="SmSResult"></returns>
         public async Task<ISmsClientResult> SendSmsAsync(string recipientNumber, string message)
         {
             var client = new RestClient(SmsUri );
@@ -138,43 +145,63 @@ namespace RouteeSMSClient
 
             if (response.IsSuccessful )
             {
-                SmSResult result = Newtonsoft.Json.JsonConvert.DeserializeObject<SmSResult>(response.Content);
-                RouteeEventArgs eventargs = new RouteeEventArgs {Data = result};
+                SmSResult result = new SmSResult(); 
+                result.SMSStatus  = SMSStatus.Sent;
+                result.ProviderResponse = (Dictionary<string, string>) Newtonsoft.Json.JsonConvert.DeserializeObject(response.Content, typeof(Dictionary<string, string>));
+                result.MessageId = result.ProviderResponse["trackingId"];
+                result.Body = result.ProviderResponse["body"];
+                result.CreatedAt =DateTime.Parse(  result.ProviderResponse["createdAt"]);
+                result.From  = result.ProviderResponse["from"];
+                result.To  = result.ProviderResponse["to"];
+                result.TrackingId = result.ProviderResponse["trackingId"];
+                SMSEventArgs eventargs = new SMSEventArgs { Data = result};
+               
                 OnSmsSent(eventargs);
                 return result;
             }
             else
             {
+                SmSResult result = new SmSResult();
                 switch (response.StatusCode)
                 {
                     case HttpStatusCode.Unauthorized:
-                        OnAuthorizationFailed(new RouteeEventArgs() { Data = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content) });
-                        return null;
+                        result.SMSStatus = SMSStatus.BadAuthorization;
+                        result.ProviderResponse =
+                            Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content);
+                     
+                        OnAuthorizationFailed(new SMSEventArgs() { Data = result.ProviderResponse  });
+                        break;
                     default:
-                        OnSmSfailed(new RouteeEventArgs()
+                        result.SMSStatus = SMSStatus.FailedToSend ;
+                        result.ProviderResponse =Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content);
+                        OnSmSfailed(new SMSEventArgs()
                         {
-                            Data = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(
-                                response.Content)
+                             Data =result.ProviderResponse 
                         });
-                        return null;
+                        break;
                 }
+                return result;
             }
         }
 
+        /// <summary>
+        /// Occurs when [on sms failed].
+        /// </summary>
         /// <inheritdoc />
-        public event EventHandler<RouteeEventArgs> SmSfailed;
+        public event EventHandler<SMSEventArgs> SmSfailed;
 
         /// <summary>
         /// Occurs when [on SMS sent].
         /// </summary>
-        public event EventHandler<RouteeEventArgs> SmsSent;
+        public event EventHandler<SMSEventArgs> SmsSent;
+
 
 
         /// <summary>
         /// Raises the <see cref="E:AuthorizationFailed" /> event.
         /// </summary>
-        /// <param name="e">The <see cref="RouteeEventArgs"/> instance containing the event data.</param>
-        protected virtual void OnAuthorizationFailed(RouteeEventArgs e)
+        /// <param name="e">The <see cref="SMSEventArgs"/> instance containing the event data.</param>
+        protected virtual void OnAuthorizationFailed(SMSEventArgs e)
         {
             AuthorizationFailed?.Invoke(this, e);
         }
@@ -183,8 +210,8 @@ namespace RouteeSMSClient
         /// <summary>
         /// Raises the <see cref="E:OnSmSfailed" /> event.
         /// </summary>
-        /// <param name="e">The <see cref="RouteeEventArgs"/> instance containing the event data.</param>
-        protected virtual void OnSmSfailed(RouteeEventArgs e)
+        /// <param name="e">The <see cref="SMSEventArgs"/> instance containing the event data.</param>
+        protected virtual void OnSmSfailed(SMSEventArgs e)
         {
             SmSfailed?.Invoke(this, e);
         }
@@ -192,8 +219,8 @@ namespace RouteeSMSClient
         /// <summary>
         /// Raises the <see cref="E:OnSmsSent" /> event.
         /// </summary>
-        /// <param name="e">The <see cref="RouteeEventArgs"/> instance containing the event data.</param>
-        protected virtual void OnSmsSent(RouteeEventArgs e)
+        /// <param name="e">The <see cref="SMSEventArgs"/> instance containing the event data.</param>
+        protected virtual void OnSmsSent(SMSEventArgs e)
         {
             SmsSent?.Invoke(this, e);
         }

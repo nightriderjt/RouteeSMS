@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2018.7.8.0" projectFile="G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Documentation.shfbproj" started="15/7/2018 7:55:41 μμ">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2018.7.8.0" projectFile="G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Documentation.shfbproj" started="18/7/2018 9:19:08 μμ">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -15,16 +15,17 @@ Loading and initializing plug-ins...
 Lightweight Website Style Version 2018.7.8.0
 Copyright &#169; 2006-2018, Eric Woodruff, All Rights Reserved
 Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
--------------------------------
-Clearing any prior web/markdown output...
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
 Source: G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\RouteeSMSClient.csproj
     Found project &#39;G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\RouteeSMSClient.csproj&#39;
+Source: G:\Archive\Programmata\GitHub\RouteeSMS\SMSInterfaces\SMSInterfaces.csproj
+    Found project &#39;G:\Archive\Programmata\GitHub\RouteeSMS\SMSInterfaces\SMSInterfaces.csproj&#39;
 
 Parsing project files
     Found assembly &#39;G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\bin\Debug\netstandard2.0\RouteeSMSClient.dll&#39;
+    Found assembly &#39;G:\Archive\Programmata\GitHub\RouteeSMS\SMSInterfaces\bin\Debug\netstandard2.0\SMSInterfaces.dll&#39;
 SHFB: Warning BE0007: A project with a different or higher framework version was found.  Changing project FrameworkVersion property from &#39;.NET Framework 4.5&#39; to &#39;.NET Framework 4.6.1&#39; for the build.
 
 References to include (excluding framework assemblies):
@@ -146,20 +147,21 @@ References to include (excluding framework assemblies):
 
 Copying XML comments files
     G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\bin\Debug\netstandard2.0\RouteeSMSClient.xml -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\RouteeSMSClient.xml
+    G:\Archive\Programmata\GitHub\RouteeSMS\SMSInterfaces\bin\Debug\netstandard2.0\SMSInterfaces.xml -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\SMSInterfaces.xml
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0240
+</plugIn>    Last step completed in 00:00:00,0080
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0040
+    Last step completed in 00:00:00,0010
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateRefInfo.proj]
-Build started 15/7/2018 7:55:44 &#163;&#163;.
+Build started 18/7/2018 9:19:10 &#163;&#163;.
 Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -355,20 +357,20 @@ GenerateRefInfo:
   Copyright ? 2006-2018, Microsoft Corporation, All Rights Reserved.
   Portions Copyright ? 2006-2018, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
-  Loaded 1 assemblies for reflection and 126 dependency assemblies.
-  Wrote information on 3 namespaces, 12 types, and 44 members
+  Loaded 2 assemblies for reflection and 126 dependency assemblies.
+  Wrote information on 5 namespaces, 14 types, and 58 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2018.7.8.0)
   Copyright ? 2006-2018, Microsoft Corporation, All Rights Reserved.
   Portions Copyright ? 2006-2018, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
 Done Building Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\GenerateRefInfo.proj&quot; (default targets).
-    Last step completed in 00:00:03,9180
+    Last step completed in 00:00:03,7030
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - TransformManifest.proj]
-Build started 15/7/2018 7:55:48 &#163;&#163;.
+Build started 18/7/2018 9:19:13 &#163;&#163;.
 Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2018.7.8.0)
@@ -383,16 +385,17 @@ TransformManifest:
     Unique name M_RouteeSMSClient_SmsClient__ctor_1 generated for M:RouteeSMSClient.SmsClient.#ctor(RouteeSMSClient.RouteeBase.ClientOptions)
     Unique name M_RouteeSMSClient_RouteeBase_ClientOptions__ctor_1 generated for M:RouteeSMSClient.RouteeBase.ClientOptions.#ctor(System.String,System.String)
     Unique name M_RouteeSMSClient_RouteeBase_Credentials__ctor_1 generated for M:RouteeSMSClient.RouteeBase.Credentials.#ctor(System.String,System.String)
+    Unique name M_SMSInterfaces_Base_SMSEventArgs__ctor_1 generated for M:SMSInterfaces.Base.SMSEventArgs.#ctor(System.Object)
   XslTransform (v2018.7.8.0)
   Copyright ? 2006-2018, Microsoft Corporation, All Rights Reserved.
   Portions Copyright ? 2006-2018, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
 Done Building Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\TransformManifest.proj&quot; (default targets).
-    Last step completed in 00:00:00,8150
+    Last step completed in 00:00:00,8140
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0320
+    Last step completed in 00:00:00,0410
 </buildStep>
 <buildStep step="GenerateInheritedDocumentation">
 Generating inherited documentation...
@@ -407,13 +410,14 @@ Indexing C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFra
 Indexing C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramework\v4.0\4.4.0.0\*.xml
 Indexing G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Newtonsoft.Json.xml
 Indexing G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\RouteeSMSClient.xml
-Indexed 160926 members in 129 file(s).  2 file(s) to scan for &lt;inheritdoc /&gt; tags.
+Indexing G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\SMSInterfaces.xml
+Indexed 160944 members in 130 file(s).  3 file(s) to scan for &lt;inheritdoc /&gt; tags.
 Merging inherited documentation...
 
 SHFB: Warning GID0004: No comments found for member &#39;M:RouteeSMSClient.RouteeBase.ClientOptions.#ctor(System.String,System.String)&#39;
 
 Documentation merged successfully
-    Last step completed in 00:00:01,5650
+    Last step completed in 00:00:01,5900
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -422,35 +426,28 @@ Checking for other token files...
 Checking for code snippets files...
 Copying images and creating the media map file...
 Generating conceptual topic files
-    Parsing topic file &#39;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Content\Welcome.aml&#39;
-    G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Content\Welcome.aml -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\ddueXml\73bdefcb-4643-444b-8df4-109db3428e97.xml
-    Parsing topic file &#39;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Content\VersionHistory\VersionHistory.aml&#39;
-    G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Content\VersionHistory\VersionHistory.aml -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\ddueXml\b9341e07-8709-46dc-bbe8-d18949557ebb.xml
-    Parsing topic file &#39;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Content\VersionHistory\v1.0.0.0.aml&#39;
-    G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Content\VersionHistory\v1.0.0.0.aml -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\ddueXml\61805e1c-c135-47f1-ab8a-92b28d3dff5c.xml
-    Last step completed in 00:00:00,1210
+    Last step completed in 00:00:00,0180
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00,0300
+    Last step completed in 00:00:00,0120
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\icons\Help.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\icons\Help.png
-G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\icons\Help.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\Help.png
-    Last step completed in 00:00:00,0140
+    Last step completed in 00:00:00,0070
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00,0040
+    Last step completed in 00:00:00,0000
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 15/7/2018 7:55:50 &#163;&#163;.
+Build started 18/7/2018 9:19:16 &#163;&#163;.
 Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2018.7.8.0)
@@ -459,12 +456,12 @@ GenerateIntermediateTOC:
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
 Done Building Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,5060
+    Last step completed in 00:00:00,4820
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,3830
+    Last step completed in 00:00:00,3890
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -472,12 +469,12 @@ G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\sandcastle.co
   Updating reference topic configurations.
   Updating conceptual topic configurations.
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00,0160
+    Last step completed in 00:00:00,0100
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - BuildTopics.proj]
-Build started 15/7/2018 7:55:51 &#163;&#163;.
+Build started 18/7/2018 9:19:17 &#163;&#163;.
 Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2018.7.8.0)
@@ -491,47 +488,27 @@ BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.Sm
 BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Unknown reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:RouteeSMSClient.SmsClient] Invalid reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnAuthorizationFailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Unknown reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnAuthorizationFailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Invalid reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnAuthorizationFailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Unknown reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnAuthorizationFailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Invalid reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmSfailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Unknown reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmSfailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Invalid reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmSfailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Unknown reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmSfailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Invalid reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmsSent(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Unknown reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmsSent(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Invalid reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmsSent(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Unknown reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmsSent(RouteeSMSClient.RouteeBase.RouteeEventArgs)] Invalid reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-  Processed 83 topic(s)
-  36 warning(s)
-  CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
-  ResolveArtLinksComponent: Copying media files...
-  ResolveReferenceLinksComponent: 1 entries added to the MSDN content ID cache.  New cache size: 16 entries
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnAuthorizationFailed(SMSInterfaces.Base.SMSEventArgs)] Unknown reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnAuthorizationFailed(SMSInterfaces.Base.SMSEventArgs)] Invalid reference link target &#39;E:AuthorizationFailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmSfailed(SMSInterfaces.Base.SMSEventArgs)] Unknown reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmSfailed(SMSInterfaces.Base.SMSEventArgs)] Invalid reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmsSent(SMSInterfaces.Base.SMSEventArgs)] Unknown reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmsSent(SMSInterfaces.Base.SMSEventArgs)] Invalid reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
+  Processed 95 topic(s)
+  18 warning(s)
+  CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 0 of 15.
   ResolveArtLinksComponent: Copying media files...
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 4 of 15.
-  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 3 of 30.
-  SaveComponent: Waiting for the document writer task to finish (1 Website API file(s) remaining)...
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 4 of 30.
+  SaveComponent: Waiting for the document writer task to finish (6 Help1 API file(s) remaining)...
 Done Building Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj&quot; (default targets).
-    Last step completed in 00:00:13,7625
+    Last step completed in 00:00:09,6700
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
@@ -547,17 +524,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing Help 1 files in G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1
-Processed 83 HTML files
+Processed 95 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Documentation.hhk
 Saving HTML Help 1 table of contents to G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Documentation.hhc
-
-Processing website files in G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website
-Processed 83 HTML files
-Sorting keywords and generating See Also indices
-Saving website keyword index to G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\WebKI.xml
-Saving website table of contents to G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\WebTOC.xml
-    Last step completed in 00:00:00,7410
+    Last step completed in 00:00:00,5640
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -623,85 +594,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\styles\branding.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\AlertCaution.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\AlertNote.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\AlertSecurity.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\CFW.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\CodeExample.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\favicon.ico
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\privstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protoperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\protstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\puboperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\pubstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\SectionCollapsed.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\SectionExpanded.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\slMobile.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\static.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\xna.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\scripts\branding.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-cs-CZ.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-de-DE.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-en-US.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-es-ES.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-fr-FR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-Help1.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-HelpViewer.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-it-IT.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-ja-JP.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-ko-KR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-pl-PL.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-pt-BR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-ru-RU.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-tr-TR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-Website.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-zh-CN.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding-zh-TW.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\styles\branding.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\index.html -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\index.html
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\search.html -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\search.html
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.aspx -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\SearchHelp.aspx
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.inc.php -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\SearchHelp.inc.php
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.php -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\SearchHelp.php
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\Web.Config -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\Web.Config
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\html\GeneralError.htm -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\html\GeneralError.htm
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\html\PageNotFound.htm -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\html\PageNotFound.htm
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\Search.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\Search.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocClose.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\TocClose.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocCollapsed.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\TocCollapsed.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocExpanded.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\TocExpanded.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\icons\TocOpen.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\scripts\branding-Website.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\scripts\clipboard.min.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:01,2284
+    Last step completed in 00:00:00,6630
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
@@ -713,7 +606,7 @@ Generating HTML Help 1 index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00,0080
+    Last step completed in 00:00:00,0060
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -730,11 +623,11 @@ Compiling HTML Help 1 file...
   
   Compile time: 0 minutes, 0 seconds
   
-  85	Topics
+  97	Topics
   
-  823	Local links
+  936	Local links
   
-  214	Internet links
+  223	Internet links
   
   0	Graphics
   
@@ -742,36 +635,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created g:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\Documentation.chm, 114,490 bytes
+  Created g:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\Documentation.chm, 116,819 bytes
   
-  Compression decreased file by 501,925 bytes.
+  Compression decreased file by 557,935 bytes.
   
-    Last step completed in 00:00:01,2190
-</buildStep>
-<buildStep step="GenerateHelpFormatTableOfContents">
-Generating website table of contents file...
-    Last step completed in 00:00:00,0010
-</buildStep>
-<buildStep step="GenerateFullTextIndex">
-Generating full-text index for the website...
-
-<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:00,5160
-</buildStep>
-<buildStep step="CopyingWebsiteFiles">
-Copying website files to output folder...
-
-Copied 214 files for the website content
-    Last step completed in 00:00:01,0600
+    Last step completed in 00:00:01,2550
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,6630
+    Last step completed in 00:00:00,1510
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 15/7/2018 7:56:10 μμ.  Total time: 00:00:29,5359
+Build completed successfully at 18/7/2018 9:19:29 μμ.  Total time: 00:00:21,0770
 
 </buildStep>
 </shfbBuild>

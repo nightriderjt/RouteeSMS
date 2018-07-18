@@ -7,7 +7,7 @@ namespace SMSInterfaces.Interfaces
     /// <summary>
     /// Performs Oauth authorization 
     /// </summary>
-    public interface IOauthAuthorizer<T>
+    public interface IOauthAuthorizer
     {
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace SMSInterfaces.Interfaces
         /// <summary>
         /// Occurs when [authorization failed].
         /// </summary>
-        event EventHandler<T> AuthorizationFailed;
+        event EventHandler<Base.SMSEventArgs> AuthorizationFailed;
 
     }
 }

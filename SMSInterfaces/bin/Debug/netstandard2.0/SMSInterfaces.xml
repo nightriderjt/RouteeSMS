@@ -4,23 +4,55 @@
         <name>SMSInterfaces</name>
     </assembly>
     <members>
+        <member name="T:SMSInterfaces.Base.SMSEventArgs">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:System.EventArgs" />
+        </member>
+        <member name="P:SMSInterfaces.Base.SMSEventArgs.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="T:SMSInterfaces.Enums.AuthorizationStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SMSInterfaces.Enums.SMSStatus">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:SMSInterfaces.Interfaces.IAuthorizationResult">
             <summary>
             
             </summary>
+        </member>
+        <member name="P:SMSInterfaces.Interfaces.IAuthorizationResult.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
         </member>
         <member name="T:SMSInterfaces.Interfaces.IServiceCredentialStoreOauth">
             <summary>
              Holds the application ID and Secret for Oauth Token authentication
             </summary>
         </member>
-        <member name="T:SMSInterfaces.Interfaces.ISmsClient`1">
+        <member name="T:SMSInterfaces.Interfaces.ISmsClient">
             <summary>
             
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:SMSInterfaces.Interfaces.ISmsClient`1.SendSmsAsync(System.String,System.String)">
+        <member name="M:SMSInterfaces.Interfaces.ISmsClient.SendSmsAsync(System.String,System.String)">
             <summary>
             Sends the SMS asynchronous.
             </summary>
@@ -28,12 +60,12 @@
             <param name="message">The message.</param>
             <returns></returns>
         </member>
-        <member name="E:SMSInterfaces.Interfaces.ISmsClient`1.SmSfailed">
+        <member name="E:SMSInterfaces.Interfaces.ISmsClient.SmSfailed">
             <summary>
             Occurs when [on sms failed].
             </summary>
         </member>
-        <member name="E:SMSInterfaces.Interfaces.ISmsClient`1.SmsSent">
+        <member name="E:SMSInterfaces.Interfaces.ISmsClient.SmsSent">
             <summary>
             Occurs when [on SMS sent].
             </summary>
@@ -43,19 +75,43 @@
             
             </summary>
         </member>
-        <member name="T:SMSInterfaces.Interfaces.IOauthAuthorizer`1">
+        <member name="P:SMSInterfaces.Interfaces.ISmsClientResult.SMSStatus">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:SMSInterfaces.Interfaces.ISmsClientResult.ProviderResponse">
+            <summary>
+            Gets or sets the provider response.
+            </summary>
+            <value>
+            The provider response.
+            </value>
+        </member>
+        <member name="P:SMSInterfaces.Interfaces.ISmsClientResult.MessageId">
+            <summary>
+            Gets or sets the message identifier.
+            </summary>
+            <value>
+            The message identifier.
+            </value>
+        </member>
+        <member name="T:SMSInterfaces.Interfaces.IOauthAuthorizer">
             <summary>
             Performs Oauth authorization 
             </summary>
         </member>
-        <member name="M:SMSInterfaces.Interfaces.IOauthAuthorizer`1.AuthorizeAsync(SMSInterfaces.Interfaces.IServiceCredentialStoreOauth)">
+        <member name="M:SMSInterfaces.Interfaces.IOauthAuthorizer.AuthorizeAsync(SMSInterfaces.Interfaces.IServiceCredentialStoreOauth)">
             <summary>
             Authorizes  asynchronous.
             </summary>
             <param name="credentials">The credentials.</param>
             <returns></returns>
         </member>
-        <member name="E:SMSInterfaces.Interfaces.IOauthAuthorizer`1.AuthorizationFailed">
+        <member name="E:SMSInterfaces.Interfaces.IOauthAuthorizer.AuthorizationFailed">
             <summary>
             Occurs when [authorization failed].
             </summary>

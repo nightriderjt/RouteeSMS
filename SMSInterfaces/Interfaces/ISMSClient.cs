@@ -7,7 +7,7 @@ namespace SMSInterfaces.Interfaces
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface ISmsClient<T>
+    public interface ISmsClient
     {
         /// <summary>
         /// Sends the SMS asynchronous.
@@ -20,12 +20,12 @@ namespace SMSInterfaces.Interfaces
         /// <summary>
         /// Occurs when [on sms failed].
         /// </summary>
-        event EventHandler<T>  SmSfailed ;
+        event EventHandler<Base.SMSEventArgs >  SmSfailed ;
 
         /// <summary>
         /// Occurs when [on SMS sent].
         /// </summary>
-        event EventHandler<T> SmsSent;
+        event EventHandler<Base.SMSEventArgs> SmsSent;
     }
 }
 

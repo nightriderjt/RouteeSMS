@@ -55,6 +55,14 @@
             The permissions.
             </value>
         </member>
+        <member name="P:RouteeSMSClient.RouteeBase.AuthorizationToken.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
         <member name="T:RouteeSMSClient.RouteeBase.ClientOptions">
             <summary>
             
@@ -120,12 +128,52 @@
             </summary>
             <seealso cref="T:SMSInterfaces.Interfaces.ISmsClientResult" />
         </member>
+        <member name="P:RouteeSMSClient.RouteeBase.SmSResult.TrackingId">
+            <summary>
+            Gets or sets the tracking identifier.
+            </summary>
+            <value>
+            The tracking identifier.
+            </value>
+        </member>
+        <member name="P:RouteeSMSClient.RouteeBase.SmSResult.Body">
+            <summary>
+            Gets or sets the body the sms message.
+            </summary>
+            <value>
+            The body.
+            </value>
+        </member>
+        <member name="P:RouteeSMSClient.RouteeBase.SmSResult.SMSStatus">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:RouteeSMSClient.RouteeBase.SmSResult.ProviderResponse">
+            <summary>
+            Gets or sets the provider response.
+            </summary>
+            <value>
+            The provider response.
+            </value>
+        </member>
+        <member name="P:RouteeSMSClient.RouteeBase.SmSResult.MessageId">
+            <summary>
+            Gets or sets the message identifier.
+            </summary>
+            <value>
+            The message identifier.
+            </value>
+        </member>
         <member name="T:RouteeSMSClient.SmsClient">
             <summary>
             
             </summary>
-            <seealso cref="!:SMSInterfaces.Interfaces.ISmsClient&lt;RouteeBase.RouteeEventArgs&gt;" />
-            <seealso cref="!:SMSInterfaces.Interfaces.IOauthAuthorizer&lt;RouteeBase.RouteeEventArgs&gt;" />
+            <seealso cref="T:SMSInterfaces.Interfaces.ISmsClient" />
+            <seealso cref="T:SMSInterfaces.Interfaces.IOauthAuthorizer" />
         </member>
         <member name="P:RouteeSMSClient.SmsClient.Token">
             <summary>
@@ -177,7 +225,7 @@
             </summary>
             <param name="recipientNumber">The recipient number.</param>
             <param name="message">The message.</param>
-            <returns cref="T:RouteeSMSClient.RouteeBase.SmSResult"> an SMSreuslt or null in case of failure</returns>
+            <returns cref="T:RouteeSMSClient.RouteeBase.SmSResult"> an SMSreuslt </returns>
         </member>
         <member name="E:RouteeSMSClient.SmsClient.SmSfailed">
             <inheritdoc />
@@ -187,23 +235,23 @@
             Occurs when [on SMS sent].
             </summary>
         </member>
-        <member name="M:RouteeSMSClient.SmsClient.OnAuthorizationFailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)">
+        <member name="M:RouteeSMSClient.SmsClient.OnAuthorizationFailed(SMSInterfaces.Base.SMSEventArgs)">
             <summary>
             Raises the <see cref="E:AuthorizationFailed" /> event.
             </summary>
-            <param name="e">The <see cref="T:RouteeSMSClient.RouteeBase.RouteeEventArgs"/> instance containing the event data.</param>
+            <param name="e">The <see cref="T:SMSInterfaces.Base.SMSEventArgs"/> instance containing the event data.</param>
         </member>
-        <member name="M:RouteeSMSClient.SmsClient.OnSmSfailed(RouteeSMSClient.RouteeBase.RouteeEventArgs)">
+        <member name="M:RouteeSMSClient.SmsClient.OnSmSfailed(SMSInterfaces.Base.SMSEventArgs)">
             <summary>
             Raises the <see cref="E:OnSmSfailed" /> event.
             </summary>
-            <param name="e">The <see cref="T:RouteeSMSClient.RouteeBase.RouteeEventArgs"/> instance containing the event data.</param>
+            <param name="e">The <see cref="T:SMSInterfaces.Base.SMSEventArgs"/> instance containing the event data.</param>
         </member>
-        <member name="M:RouteeSMSClient.SmsClient.OnSmsSent(RouteeSMSClient.RouteeBase.RouteeEventArgs)">
+        <member name="M:RouteeSMSClient.SmsClient.OnSmsSent(SMSInterfaces.Base.SMSEventArgs)">
             <summary>
             Raises the <see cref="E:OnSmsSent" /> event.
             </summary>
-            <param name="e">The <see cref="T:RouteeSMSClient.RouteeBase.RouteeEventArgs"/> instance containing the event data.</param>
+            <param name="e">The <see cref="T:SMSInterfaces.Base.SMSEventArgs"/> instance containing the event data.</param>
         </member>
     </members>
 </doc>
