@@ -11,7 +11,8 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "11.0.2",
-          "RestSharp": "106.3.1"
+          "RestSharp": "106.3.1",
+          "SMSInterfaces": "1.0.0"
         },
         "runtime": {
           "RouteeSMSClient.dll": {}
@@ -31,6 +32,11 @@
       "RestSharp/106.3.1": {
         "runtime": {
           "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
+      "SMSInterfaces/1.0.0": {
+        "runtime": {
+          "SMSInterfaces.dll": {}
         }
       }
     }
@@ -68,6 +74,11 @@
       "sha512": "sha512-TmlN7SXjK52zzpQDTuzw7IH3XQ2Svtss/4zvQBKIgf74QIVxvlxoAqQYu1EhNQ1bMSBIQ4aK120BO7W+v8/kiQ==",
       "path": "restsharp/106.3.1",
       "hashPath": "restsharp.106.3.1.nupkg.sha512"
+    },
+    "SMSInterfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

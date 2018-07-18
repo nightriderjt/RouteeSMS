@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using RouteeSMSClient.Interfaces;
+using SMSInterfaces.Interfaces;
+
 
 namespace RouteeSMSClient.RouteeBase
 {
     /// <summary>
     /// 
     /// </summary>
-    /// <seealso cref="RouteeSMSClient.Interfaces.IOptions" />
+    /// <seealso cref="IOptions" />
     /// <inheritdoc />
     public class ClientOptions:IOptions 
     {

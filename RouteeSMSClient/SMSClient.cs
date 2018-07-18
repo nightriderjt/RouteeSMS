@@ -5,16 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
 using RouteeSMSClient.RouteeBase;
+using SMSInterfaces.Enums;
 using SMSInterfaces.Interfaces;
 
 namespace RouteeSMSClient
 {
 
+
     /// <summary>
-    /// The Routee SMS Client
+    /// 
     /// </summary>
-    /// <seealso cref="T:RouteeSMSClient.Interfaces.IServiceCredentialStoreOauth" />
-    /// /// <seealso cref="T:RouteeSMSClient.RouteeBase.SmSResult" />
+    /// <seealso cref="SMSInterfaces.Interfaces.ISmsClient{RouteeBase.RouteeEventArgs}" />
+    /// <seealso cref="SMSInterfaces.Interfaces.IOauthAuthorizer{RouteeBase.RouteeEventArgs}" />
     public class SmsClient:ISmsClient<RouteeEventArgs >,IOauthAuthorizer<RouteeEventArgs>
     {
 
@@ -52,7 +54,11 @@ namespace RouteeSMSClient
             Options = new ClientOptions();
         }
 
-        public SmsClient(RouteeBase.ClientOptions   options)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SmsClient"/> class.
+        /// </summary>
+        /// <param name="options">The options.</param>
+        public SmsClient(ClientOptions options)
         {
             Options =options;
         }
@@ -79,12 +85,14 @@ namespace RouteeSMSClient
             var response =await client.ExecutePostTaskAsync(request);
             if (response.IsSuccessful)
             {
-                Token= Newtonsoft.Json.JsonConvert.DeserializeObject<RouteeBase.AuthorizationToken>(response.Content);
+                Token= Newtonsoft.Json.JsonConvert.DeserializeObject<AuthorizationToken>(response.Content);
+                Token.Status = AuthorizationStatus.Authorized;
                 return  Token ;
             }
             else
             {
                 OnAuthorizationFailed(new RouteeEventArgs() { Data = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content) });
+                Token.Status = AuthorizationStatus.Unauthorized ;
                 return null;
             }
         }
@@ -111,7 +119,7 @@ namespace RouteeSMSClient
                 {
                     body = message,
                     to = recipientNumber,
-                    from = this.Options.Originator
+                    from = Options.Originator
                 };
             }
             else
@@ -120,7 +128,7 @@ namespace RouteeSMSClient
                 {
                     body = message,
                     to = recipientNumber,
-                    from = this.Options.Originator,
+                    from = Options.Originator,
                     callback = new { url =Options.CallBackUri }
                 };
             }

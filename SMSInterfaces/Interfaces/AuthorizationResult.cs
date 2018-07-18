@@ -1,5 +1,7 @@
 ﻿
 
+using SMSInterfaces.Enums;
+
 namespace SMSInterfaces.Interfaces
 {
     /// <summary>
@@ -7,6 +9,6 @@ namespace SMSInterfaces.Interfaces
     /// </summary>
     public interface IAuthorizationResult
     {
-      
+        AuthorizationStatus Status { get; set; }
     }
 }

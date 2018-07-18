@@ -4,67 +4,11 @@
         <name>RouteeSMSClient</name>
     </assembly>
     <members>
-        <member name="T:RouteeSMSClient.Interfaces.IAuthorizationResult">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:RouteeSMSClient.Interfaces.IServiceCredentialStoreOauth">
-            <summary>
-             Holds the application ID and Secret for Oauth Token authentication
-            </summary>
-        </member>
-        <member name="T:RouteeSMSClient.Interfaces.ISmsClient`1">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:RouteeSMSClient.Interfaces.ISmsClient`1.SendSmsAsync(System.String,System.String)">
-            <summary>
-            Sends the SMS asynchronous.
-            </summary>
-            <param name="recipientNumber">The recipient number.</param>
-            <param name="message">The message.</param>
-            <returns></returns>
-        </member>
-        <member name="E:RouteeSMSClient.Interfaces.ISmsClient`1.SmSfailed">
-            <summary>
-            Occurs when [on sms failed].
-            </summary>
-        </member>
-        <member name="E:RouteeSMSClient.Interfaces.ISmsClient`1.SmsSent">
-            <summary>
-            Occurs when [on SMS sent].
-            </summary>
-        </member>
-        <member name="T:RouteeSMSClient.Interfaces.ISmsClientResult">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:RouteeSMSClient.Interfaces.IOauthAuthorizer`1">
-            <summary>
-            Performs Oauth authorization 
-            </summary>
-        </member>
-        <member name="M:RouteeSMSClient.Interfaces.IOauthAuthorizer`1.AuthorizeAsync(RouteeSMSClient.Interfaces.IServiceCredentialStoreOauth)">
-            <summary>
-            Authorizes  asynchronous.
-            </summary>
-            <param name="credentials">The credentials.</param>
-            <returns></returns>
-        </member>
-        <member name="E:RouteeSMSClient.Interfaces.IOauthAuthorizer`1.AuthorizationFailed">
-            <summary>
-            Occurs when [authorization failed].
-            </summary>
-        </member>
         <member name="T:RouteeSMSClient.RouteeBase.AuthorizationToken">
             <summary>
             
             </summary>
-            <seealso cref="T:RouteeSMSClient.Interfaces.IAuthorizationResult" />
+            <seealso cref="T:SMSInterfaces.Interfaces.IAuthorizationResult" />
         </member>
         <member name="M:RouteeSMSClient.RouteeBase.AuthorizationToken.#ctor">
             <summary>
@@ -115,7 +59,7 @@
             <summary>
             
             </summary>
-            <seealso cref="T:RouteeSMSClient.Interfaces.IOptions" />
+            <seealso cref="T:SMSInterfaces.Interfaces.IOptions" />
             <inheritdoc />
         </member>
         <member name="M:RouteeSMSClient.RouteeBase.ClientOptions.#ctor(System.String,System.String)">
@@ -170,12 +114,18 @@
             The application secret.
             </value>
         </member>
+        <member name="T:RouteeSMSClient.RouteeBase.SmSResult">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:SMSInterfaces.Interfaces.ISmsClientResult" />
+        </member>
         <member name="T:RouteeSMSClient.SmsClient">
             <summary>
-            The Routee SMS Client
+            
             </summary>
-            <seealso cref="T:RouteeSMSClient.Interfaces.IServiceCredentialStoreOauth" />
-            /// <seealso cref="T:RouteeSMSClient.RouteeBase.SmSResult" />
+            <seealso cref="!:SMSInterfaces.Interfaces.ISmsClient&lt;RouteeBase.RouteeEventArgs&gt;" />
+            <seealso cref="!:SMSInterfaces.Interfaces.IOauthAuthorizer&lt;RouteeBase.RouteeEventArgs&gt;" />
         </member>
         <member name="P:RouteeSMSClient.SmsClient.Token">
             <summary>
@@ -204,7 +154,14 @@
             Initializes a new instance of the <see cref="T:RouteeSMSClient.SmsClient"/> class.
             </summary>
         </member>
-        <member name="M:RouteeSMSClient.SmsClient.AuthorizeAsync(RouteeSMSClient.Interfaces.IServiceCredentialStoreOauth)">
+        <member name="M:RouteeSMSClient.SmsClient.#ctor(RouteeSMSClient.RouteeBase.ClientOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RouteeSMSClient.SmsClient"/> class.
+            </summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="M:RouteeSMSClient.SmsClient.AuthorizeAsync(SMSInterfaces.Interfaces.IServiceCredentialStoreOauth)">
+            <inheritdoc />
             <summary>
             Authorizes the client
             </summary>

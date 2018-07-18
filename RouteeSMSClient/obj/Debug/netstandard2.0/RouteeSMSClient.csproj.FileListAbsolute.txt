@@ -8,3 +8,7 @@ G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\obj\Debug\netstandard2.0
 G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\obj\Debug\netstandard2.0\RouteeSMSClient.pdb
 G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\bin\Debug\netstandard2.0\RouteeSMSClient.xml
 G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\obj\Debug\netstandard2.0\RouteeSMSClient.csprojAssemblyReference.cache
+G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\bin\Debug\netstandard2.0\SMSInterfaces.dll
+G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\bin\Debug\netstandard2.0\SMSInterfaces.pdb
+G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\bin\Debug\netstandard2.0\SMSInterfaces.xml
+G:\Archive\Programmata\GitHub\RouteeSMS\RouteeSMSClient\obj\Debug\netstandard2.0\RouteeSMSClient.csproj.CopyComplete

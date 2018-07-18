@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using SMSInterfaces.Enums;
 using SMSInterfaces.Interfaces;
 
 
@@ -53,5 +54,13 @@ namespace RouteeSMSClient.RouteeBase
         /// The permissions.
         /// </value>
         public List<string> permissions { get; set; }
+
+        /// <summary>
+        /// Gets or sets the status.
+        /// </summary>
+        /// <value>
+        /// The status.
+        /// </value>
+        public AuthorizationStatus Status { get; set; }
     }
 }
