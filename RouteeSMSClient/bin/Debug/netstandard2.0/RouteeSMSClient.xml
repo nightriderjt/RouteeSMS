@@ -168,6 +168,16 @@
             The message identifier.
             </value>
         </member>
+        <member name="T:RouteeSMSClient.RouteeBase.TrackingInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RouteeSMSClient.RouteeBase.TrackingInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RouteeSMSClient.RouteeBase.TrackingInfo"/> class.
+            </summary>
+        </member>
         <member name="T:RouteeSMSClient.SmsClient">
             <summary>
             
@@ -214,9 +224,13 @@
             Authorizes the client
             </summary>
             <param name="credentials">The credentials.</param>
-            <returns cref="T:RouteeSMSClient.RouteeBase.AuthorizationToken"> an authorization token object or null in case of failure</returns>
+            <returns cref="T:SMSInterfaces.Interfaces.IAuthorizationResult"> an authorization token object or null in case of failure</returns>
+            /// <returns cref="T:RouteeSMSClient.RouteeBase.AuthorizationToken"> an authorization token object or null in case of failure</returns>
         </member>
         <member name="E:RouteeSMSClient.SmsClient.AuthorizationFailed">
+            <summary>
+            Occurs when [authorization failed].
+            </summary>
             <inheritdoc />
         </member>
         <member name="M:RouteeSMSClient.SmsClient.SendSmsAsync(System.String,System.String)">
@@ -225,9 +239,19 @@
             </summary>
             <param name="recipientNumber">The recipient number.</param>
             <param name="message">The message.</param>
-            <returns cref="T:RouteeSMSClient.RouteeBase.SmSResult"> an SMSreuslt </returns>
+            <returns cref="T:RouteeSMSClient.RouteeBase.SmSResult"></returns>
+        </member>
+        <member name="M:RouteeSMSClient.SmsClient.TrackSmsAsync(System.String)">
+            <summary>
+            Tracks the SMS asynchronous.
+            </summary>
+            <param name="messageId">The message identifier.</param>
+            <returns cref="T:SMSInterfaces.Base.TrackInfo"></returns>
         </member>
         <member name="E:RouteeSMSClient.SmsClient.SmSfailed">
+            <summary>
+            Occurs when [on sms failed].
+            </summary>
             <inheritdoc />
         </member>
         <member name="E:RouteeSMSClient.SmsClient.SmsSent">

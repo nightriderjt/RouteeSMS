@@ -8,6 +8,8 @@
         FailedToSend = 1,
         Sent=2,
         Delivered=3,
-        BadAuthorization=4
+        BadAuthorization=4,
+        Undelivered=5,
+        Queued=6
     }
 }

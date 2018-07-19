@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2018.7.8.0" projectFile="G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Documentation.shfbproj" started="18/7/2018 9:19:08 μμ">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2018.7.8.0" projectFile="G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Documentation.shfbproj" started="19/7/2018 11:14:47 μμ">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -152,16 +152,16 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0080
+</plugIn>    Last step completed in 00:00:00,0200
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0010
+    Last step completed in 00:00:00,0050
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateRefInfo.proj]
-Build started 18/7/2018 9:19:10 &#163;&#163;.
+Build started 19/7/2018 11:14:50 &#163;&#163;.
 Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -358,19 +358,19 @@ GenerateRefInfo:
   Portions Copyright ? 2006-2018, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
   Loaded 2 assemblies for reflection and 126 dependency assemblies.
-  Wrote information on 5 namespaces, 14 types, and 58 members
+  Wrote information on 5 namespaces, 19 types, and 93 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2018.7.8.0)
   Copyright ? 2006-2018, Microsoft Corporation, All Rights Reserved.
   Portions Copyright ? 2006-2018, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
 Done Building Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\GenerateRefInfo.proj&quot; (default targets).
-    Last step completed in 00:00:03,7030
+    Last step completed in 00:00:03,9352
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - TransformManifest.proj]
-Build started 18/7/2018 9:19:13 &#163;&#163;.
+Build started 19/7/2018 11:14:54 &#163;&#163;.
 Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2018.7.8.0)
@@ -391,11 +391,11 @@ TransformManifest:
   Portions Copyright ? 2006-2018, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
 Done Building Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\TransformManifest.proj&quot; (default targets).
-    Last step completed in 00:00:00,8140
+    Last step completed in 00:00:00,8900
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0410
+    Last step completed in 00:00:00,0380
 </buildStep>
 <buildStep step="GenerateInheritedDocumentation">
 Generating inherited documentation...
@@ -411,13 +411,13 @@ Indexing C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramew
 Indexing G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Newtonsoft.Json.xml
 Indexing G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\RouteeSMSClient.xml
 Indexing G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\SMSInterfaces.xml
-Indexed 160944 members in 130 file(s).  3 file(s) to scan for &lt;inheritdoc /&gt; tags.
+Indexed 160954 members in 130 file(s).  3 file(s) to scan for &lt;inheritdoc /&gt; tags.
 Merging inherited documentation...
 
 SHFB: Warning GID0004: No comments found for member &#39;M:RouteeSMSClient.RouteeBase.ClientOptions.#ctor(System.String,System.String)&#39;
 
 Documentation merged successfully
-    Last step completed in 00:00:01,5900
+    Last step completed in 00:00:01,6300
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -426,28 +426,28 @@ Checking for other token files...
 Checking for code snippets files...
 Copying images and creating the media map file...
 Generating conceptual topic files
-    Last step completed in 00:00:00,0180
+    Last step completed in 00:00:00,1160
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00,0120
+    Last step completed in 00:00:00,0140
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\icons\Help.png -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\icons\Help.png
-    Last step completed in 00:00:00,0070
+    Last step completed in 00:00:00,0100
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00,0000
+    Last step completed in 00:00:00,0020
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 18/7/2018 9:19:16 &#163;&#163;.
+Build started 19/7/2018 11:14:57 &#163;&#163;.
 Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2018.7.8.0)
@@ -456,12 +456,12 @@ GenerateIntermediateTOC:
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
 Done Building Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,4820
+    Last step completed in 00:00:00,5027
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,3890
+    Last step completed in 00:00:00,4600
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -469,12 +469,12 @@ G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\sandcastle.co
   Updating reference topic configurations.
   Updating conceptual topic configurations.
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00,0100
+    Last step completed in 00:00:00,0110
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - BuildTopics.proj]
-Build started 18/7/2018 9:19:17 &#163;&#163;.
+Build started 19/7/2018 11:14:58 &#163;&#163;.
 Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2018.7.8.0)
@@ -500,19 +500,20 @@ BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.Sm
 BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmSfailed(SMSInterfaces.Base.SMSEventArgs)] Invalid reference link target &#39;E:OnSmSfailed&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmsSent(SMSInterfaces.Base.SMSEventArgs)] Unknown reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [M:RouteeSMSClient.SmsClient.OnSmsSent(SMSInterfaces.Base.SMSEventArgs)] Invalid reference link target &#39;E:OnSmsSent&#39;. [G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj]
-  Processed 95 topic(s)
+  Processed 142 topic(s)
   18 warning(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 0 of 15.
   ResolveArtLinksComponent: Copying media files...
+  ResolveReferenceLinksComponent: 1 entries added to the MSDN content ID cache.  New cache size: 18 entries
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 4 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 4 of 30.
-  SaveComponent: Waiting for the document writer task to finish (6 Help1 API file(s) remaining)...
+  SaveComponent: Waiting for the document writer task to finish (8 Help1 API file(s) remaining)...
 Done Building Project &quot;G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\BuildTopics.proj&quot; (default targets).
-    Last step completed in 00:00:09,6700
+    Last step completed in 00:00:11,8886
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0030
+    Last step completed in 00:00:00,0040
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -524,11 +525,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing Help 1 files in G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1
-Processed 95 HTML files
+Processed 142 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Documentation.hhk
 Saving HTML Help 1 table of contents to G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Documentation.hhc
-    Last step completed in 00:00:00,5640
+    Last step completed in 00:00:00,7590
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -594,7 +595,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; G:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\styles\branding.css
-    Last step completed in 00:00:00,6630
+    Last step completed in 00:00:00,6951
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
@@ -606,7 +607,7 @@ Generating HTML Help 1 index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00,0060
+    Last step completed in 00:00:00,0310
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -623,11 +624,11 @@ Compiling HTML Help 1 file...
   
   Compile time: 0 minutes, 0 seconds
   
-  97	Topics
+  144	Topics
   
-  936	Local links
+  1,423	Local links
   
-  223	Internet links
+  368	Internet links
   
   0	Graphics
   
@@ -635,19 +636,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created g:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\Documentation.chm, 116,819 bytes
+  Created g:\Archive\Programmata\GitHub\RouteeSMS\Documentation\Help\Working\Output\HtmlHelp1\Documentation.chm, 137,323 bytes
   
-  Compression decreased file by 557,935 bytes.
+  Compression decreased file by 844,632 bytes.
   
-    Last step completed in 00:00:01,2550
+    Last step completed in 00:00:01,8640
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,1510
+    Last step completed in 00:00:00,1990
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 18/7/2018 9:19:29 μμ.  Total time: 00:00:21,0770
+Build completed successfully at 19/7/2018 11:15:13 μμ.  Total time: 00:00:25,5412
 
 </buildStep>
 </shfbBuild>

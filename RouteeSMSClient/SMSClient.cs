@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using RestSharp.Extensions;
 
 namespace RouteeSMSClient
 {
@@ -145,17 +146,19 @@ namespace RouteeSMSClient
 
             if (response.IsSuccessful )
             {
-                SmSResult result = new SmSResult(); 
-                result.SMSStatus  = SMSStatus.Sent;
-                result.ProviderResponse = (Dictionary<string, string>) Newtonsoft.Json.JsonConvert.DeserializeObject(response.Content, typeof(Dictionary<string, string>));
+                var result = new SmSResult
+                {
+                    SMSStatus = SMSStatus.Sent,
+                    ProviderResponse = (Dictionary<string, string>)Newtonsoft.Json.JsonConvert.DeserializeObject(response.Content, typeof(Dictionary<string, string>))
+                };
                 result.MessageId = result.ProviderResponse["trackingId"];
                 result.Body = result.ProviderResponse["body"];
                 result.CreatedAt =DateTime.Parse(  result.ProviderResponse["createdAt"]);
                 result.From  = result.ProviderResponse["from"];
                 result.To  = result.ProviderResponse["to"];
                 result.TrackingId = result.ProviderResponse["trackingId"];
-                SMSEventArgs eventargs = new SMSEventArgs { Data = result};
-               
+                var eventargs = new SMSEventArgs { Data = result};
+
                 OnSmsSent(eventargs);
                 return result;
             }
@@ -182,6 +185,80 @@ namespace RouteeSMSClient
                 }
                 return result;
             }
+        }
+
+
+
+        /// <summary>
+        /// Tracks the SMS asynchronous.
+        /// </summary>
+        /// <param name="messageId">The message identifier.</param>
+        /// <returns cref="TrackInfo">TrackInfo</returns>
+        public async Task<ITrackingInfo> TrackSmsAsync(string messageId)
+        {
+            var client = new RestClient("https://connect.routee.net/sms/tracking/single/" + messageId);
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("content-type", "application/json");
+            request.AddHeader("authorization", "Bearer " + Token.access_token);
+            var response = await client.ExecuteTaskAsync(request);
+            var result = new SMSInterfaces.Base.TrackInfo();
+
+            if (response.IsSuccessful)
+            {
+                var jsonresult =
+                    (List<TrackingInfo>) Newtonsoft.Json.JsonConvert.DeserializeObject(response.Content,
+                        typeof(List<TrackingInfo>));
+               
+                result.Providerresponse = jsonresult[0];
+                result.Messageid = messageId;
+
+                switch (jsonresult[0].status.status)
+                {
+                    case "Delivered":
+                        result.Status = SMSStatus.Delivered;
+                        break;
+                    case "Undelivered":
+                        result.Status = SMSStatus.Undelivered;
+                        break;
+                    case "Queued":
+                        result.Status = SMSStatus.Queued ;
+                        break;
+                    case "Sent":
+                        result.Status = SMSStatus.Sent ;
+                        break;
+                    case "Failed":
+                        result.Status = SMSStatus.FailedToSend ;
+                        break;
+                    case "Unsent":
+                        result.Status = SMSStatus.FailedToSend;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                switch (response.StatusCode)
+                {
+                    case HttpStatusCode.Unauthorized:
+                       result.Status  = SMSStatus.BadAuthorization;
+                        result.Providerresponse  =
+                            Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content);
+
+                        OnAuthorizationFailed(new SMSEventArgs() {Data = result.Providerresponse });
+                        break;
+                    default:
+                        result.Status = SMSStatus.FailedToSend;
+                        result.Providerresponse =
+                            Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content);
+                        OnSmSfailed(new SMSEventArgs()
+                        {
+                            Data = result.Providerresponse
+                        });
+                        break;
+                }
+            }
+            return result;
         }
 
         /// <summary>
