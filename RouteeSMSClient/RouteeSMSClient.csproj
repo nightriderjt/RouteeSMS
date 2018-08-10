@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>RouteeSMSProvider</PackageId>
+    <Authors>ZIsis Stilianos</Authors>
+    <Product>RouteeSMSProvider</Product>
+    <Version>2018.07.19.001</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

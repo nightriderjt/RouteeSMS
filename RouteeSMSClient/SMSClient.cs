@@ -19,8 +19,8 @@ namespace RouteeSMSClient
     /// 
     /// </summary>
     /// <seealso cref="SMSInterfaces.Interfaces.ISmsClient" />
-    /// <seealso cref="SMSInterfaces.Interfaces.IOauthAuthorizer" />
-    public class SmsClient:ISmsClient,IOauthAuthorizer
+    /// <seealso cref="SMSInterfaces.Interfaces.IAuthorizer" />
+    public class SmsClient:ISmsClient,IAuthorizer
     {
 
         private string AuthorizeUri { get;  } = "https://auth.routee.net/oauth/token";

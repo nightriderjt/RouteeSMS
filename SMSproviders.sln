@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Documentation\Documentation.shfbproj", "{B59645B0-D454-4682-BBC9-E2069245AFBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSInterfaces", "SMSInterfaces\SMSInterfaces.csproj", "{ABF5BBFD-6A32-4E6E-AFE8-139A80D1FD0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMSInterfaces", "SMSInterfaces\SMSInterfaces.csproj", "{ABF5BBFD-6A32-4E6E-AFE8-139A80D1FD0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPSMSClient", "ASPSMSClient\ASPSMSClient.csproj", "{65F6176B-7A6A-4761-B00A-8D6FD0ED6476}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{ABF5BBFD-6A32-4E6E-AFE8-139A80D1FD0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABF5BBFD-6A32-4E6E-AFE8-139A80D1FD0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABF5BBFD-6A32-4E6E-AFE8-139A80D1FD0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F6176B-7A6A-4761-B00A-8D6FD0ED6476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F6176B-7A6A-4761-B00A-8D6FD0ED6476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F6176B-7A6A-4761-B00A-8D6FD0ED6476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F6176B-7A6A-4761-B00A-8D6FD0ED6476}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

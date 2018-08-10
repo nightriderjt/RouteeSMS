@@ -7,7 +7,7 @@ namespace SMSInterfaces.Interfaces
     /// <summary>
     /// Performs Oauth authorization 
     /// </summary>
-    public interface IOauthAuthorizer
+    public interface IAuthorizer
     {
 
         /// <summary>

@@ -246,7 +246,7 @@
             Tracks the SMS asynchronous.
             </summary>
             <param name="messageId">The message identifier.</param>
-            <returns cref="T:SMSInterfaces.Base.TrackInfo"></returns>
+            <returns cref="T:SMSInterfaces.Base.TrackInfo">TrackInfo</returns>
         </member>
         <member name="E:RouteeSMSClient.SmsClient.SmSfailed">
             <summary>

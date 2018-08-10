@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Tests"
+    "\\.github\\ISSUE_TEMPLATE"
   ],
-  "SelectedNode": "\\Tests\\UnitTest1.cs",
+  "SelectedNode": "\\RouteeSMSClient",
   "PreviewInSolutionExplorer": false
 }

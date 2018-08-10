@@ -7,4 +7,3 @@ G:\Archive\Programmata\GitHub\RouteeSMS\SMSInterfaces\obj\Debug\netstandard2.0\S
 G:\Archive\Programmata\GitHub\RouteeSMS\SMSInterfaces\obj\Debug\netstandard2.0\SMSInterfaces.AssemblyInfo.cs
 G:\Archive\Programmata\GitHub\RouteeSMS\SMSInterfaces\obj\Debug\netstandard2.0\SMSInterfaces.dll
 G:\Archive\Programmata\GitHub\RouteeSMS\SMSInterfaces\obj\Debug\netstandard2.0\SMSInterfaces.pdb
-G:\Archive\Programmata\GitHub\RouteeSMS\SMSInterfaces\obj\Debug\netstandard2.0\SMSInterfaces.csprojAssemblyReference.cache
