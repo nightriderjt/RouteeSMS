@@ -32,6 +32,6 @@ namespace SMSInterfaces.Interfaces
         /// <value>
         /// The message identifier.
         /// </value>
-        string MessageId { get; set; }
+        string TrackingId { get; set; }
     }
 }

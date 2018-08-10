@@ -70,6 +70,11 @@
             <seealso cref="T:SMSInterfaces.Interfaces.IOptions" />
             <inheritdoc />
         </member>
+        <member name="M:RouteeSMSClient.RouteeBase.ClientOptions.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RouteeSMSClient.RouteeBase.ClientOptions"/> class.
+            </summary>
+        </member>
         <member name="M:RouteeSMSClient.RouteeBase.ClientOptions.#ctor(System.String,System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:RouteeSMSClient.RouteeBase.ClientOptions" /> class.
@@ -158,14 +163,6 @@
             </summary>
             <value>
             The provider response.
-            </value>
-        </member>
-        <member name="P:RouteeSMSClient.RouteeBase.SmSResult.MessageId">
-            <summary>
-            Gets or sets the message identifier.
-            </summary>
-            <value>
-            The message identifier.
             </value>
         </member>
         <member name="T:RouteeSMSClient.RouteeBase.TrackingInfo">

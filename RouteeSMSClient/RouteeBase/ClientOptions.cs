@@ -13,6 +13,9 @@ namespace RouteeSMSClient.RouteeBase
     /// <inheritdoc />
     public class ClientOptions:IOptions 
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ClientOptions"/> class.
+        /// </summary>
         public ClientOptions()
         {
         }

@@ -53,6 +53,23 @@
             The status.
             </value>
         </member>
+        <member name="T:SMSInterfaces.Interfaces.IAuthorizer">
+            <summary>
+            Performs Oauth authorization 
+            </summary>
+        </member>
+        <member name="M:SMSInterfaces.Interfaces.IAuthorizer.AuthorizeAsync(SMSInterfaces.Interfaces.ICredentialStore)">
+            <summary>
+            Authorizes  asynchronous.
+            </summary>
+            <param name="credentials">The credentials.</param>
+            <returns></returns>
+        </member>
+        <member name="E:SMSInterfaces.Interfaces.IAuthorizer.AuthorizationFailed">
+            <summary>
+            Occurs when [authorization failed].
+            </summary>
+        </member>
         <member name="T:SMSInterfaces.Interfaces.IServiceCredentialStoreOauth">
             <summary>
              Holds the application ID and Secret for Oauth Token authentication
@@ -126,7 +143,7 @@
             The provider response.
             </value>
         </member>
-        <member name="P:SMSInterfaces.Interfaces.ISmsClientResult.MessageId">
+        <member name="P:SMSInterfaces.Interfaces.ISmsClientResult.TrackingId">
             <summary>
             Gets or sets the message identifier.
             </summary>
@@ -162,23 +179,6 @@
             <value>
             The providerresponse.
             </value>
-        </member>
-        <member name="T:SMSInterfaces.Interfaces.IAuthorizer">
-            <summary>
-            Performs Oauth authorization 
-            </summary>
-        </member>
-        <member name="M:SMSInterfaces.Interfaces.IAuthorizer.AuthorizeAsync(SMSInterfaces.Interfaces.ICredentialStore)">
-            <summary>
-            Authorizes  asynchronous.
-            </summary>
-            <param name="credentials">The credentials.</param>
-            <returns></returns>
-        </member>
-        <member name="E:SMSInterfaces.Interfaces.IAuthorizer.AuthorizationFailed">
-            <summary>
-            Occurs when [authorization failed].
-            </summary>
         </member>
     </members>
 </doc>

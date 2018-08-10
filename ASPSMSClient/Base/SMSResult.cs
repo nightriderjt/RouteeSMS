@@ -1,35 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using SMSInterfaces.Enums;
 using SMSInterfaces.Interfaces;
 
-
-namespace RouteeSMSClient.RouteeBase
+namespace ASPSMSClient.Base
 {
-
     /// <summary>
     /// 
     /// </summary>
     /// <seealso cref="SMSInterfaces.Interfaces.ISmsClientResult" />
-    public class SmSResult:ISmsClientResult
+    public class SmsResult:ISmsClientResult 
     {
         /// <summary>
-        /// Gets or sets the tracking identifier.
+        /// Initializes a new instance of the <see cref="SmsResult"/> class.
         /// </summary>
-        /// <value>
-        /// The tracking identifier.
-        /// </value>
-        public string TrackingId { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public string From { get; set; }
-        public string To { get; set; }
-        /// <summary>
-        /// Gets or sets the body the sms message.
-        /// </summary>
-        /// <value>
-        /// The body.
-        /// </value>
-        public string Body { get; set; }
+        public SmsResult()
+        {
+        }
+
         /// <summary>
         /// Gets or sets the status.
         /// </summary>
@@ -44,6 +31,15 @@ namespace RouteeSMSClient.RouteeBase
         /// The provider response.
         /// </value>
         public Dictionary<string, string> ProviderResponse { get; set; }
-      
+        /// <summary>
+        /// Gets or sets the tracking identifier.
+        /// </summary>
+        /// <value>
+        /// The tracking identifier.
+        /// </value>
+        public string TrackingId { get; set; }
+
+        public string From { get; set; }
+        public string To { get; set; }
     }
 }

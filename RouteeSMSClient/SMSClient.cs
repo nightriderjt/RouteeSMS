@@ -151,7 +151,7 @@ namespace RouteeSMSClient
                     SMSStatus = SMSStatus.Sent,
                     ProviderResponse = (Dictionary<string, string>)Newtonsoft.Json.JsonConvert.DeserializeObject(response.Content, typeof(Dictionary<string, string>))
                 };
-                result.MessageId = result.ProviderResponse["trackingId"];
+                result.TrackingId  = result.ProviderResponse["trackingId"];
                 result.Body = result.ProviderResponse["body"];
                 result.CreatedAt =DateTime.Parse(  result.ProviderResponse["createdAt"]);
                 result.From  = result.ProviderResponse["from"];
