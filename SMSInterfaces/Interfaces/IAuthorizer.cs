@@ -15,7 +15,7 @@ namespace SMSInterfaces.Interfaces
         /// </summary>
         /// <param name="credentials">The credentials.</param>
         /// <returns></returns>
-        Task<IAuthorizationResult> AuthorizeAsync(IServiceCredentialStoreOauth credentials);
+        Task<IAuthorizationResult> AuthorizeAsync(ICredentialStore  credentials);
         /// <summary>
         /// Occurs when [authorization failed].
         /// </summary>

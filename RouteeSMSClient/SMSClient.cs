@@ -68,17 +68,17 @@ namespace RouteeSMSClient
 
 
 
-        /// <inheritdoc />
+    
         /// <summary>
         /// Authorizes the client
         /// </summary>
         /// <param name="credentials">The credentials.</param>
         /// <returns cref="IAuthorizationResult"> an authorization token object or null in case of failure</returns>
         /// /// <returns cref="AuthorizationToken "> an authorization token object or null in case of failure</returns>
-        public async Task<IAuthorizationResult> AuthorizeAsync(IServiceCredentialStoreOauth   credentials)
+        public async Task<IAuthorizationResult> AuthorizeAsync(ICredentialStore    credentials)
         {
-           
-         var keyToEncode = credentials.ApplicationId  + ":" + credentials.ApplicationSecret ;
+            var credentialStore =(IServiceCredentialStoreOauth ) credentials;
+         var keyToEncode = credentialStore.ApplicationId  + ":" + credentialStore.ApplicationSecret ;
           var encodedValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(keyToEncode));
 
             var client = new RestClient(AuthorizeUri);

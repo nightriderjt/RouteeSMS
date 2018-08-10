@@ -183,7 +183,7 @@
             
             </summary>
             <seealso cref="T:SMSInterfaces.Interfaces.ISmsClient" />
-            <seealso cref="T:SMSInterfaces.Interfaces.IOauthAuthorizer" />
+            <seealso cref="T:SMSInterfaces.Interfaces.IAuthorizer" />
         </member>
         <member name="P:RouteeSMSClient.SmsClient.Token">
             <summary>
@@ -218,8 +218,7 @@
             </summary>
             <param name="options">The options.</param>
         </member>
-        <member name="M:RouteeSMSClient.SmsClient.AuthorizeAsync(SMSInterfaces.Interfaces.IServiceCredentialStoreOauth)">
-            <inheritdoc />
+        <member name="M:RouteeSMSClient.SmsClient.AuthorizeAsync(SMSInterfaces.Interfaces.ICredentialStore)">
             <summary>
             Authorizes the client
             </summary>

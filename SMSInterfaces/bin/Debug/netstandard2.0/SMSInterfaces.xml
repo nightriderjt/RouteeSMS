@@ -58,6 +58,22 @@
              Holds the application ID and Secret for Oauth Token authentication
             </summary>
         </member>
+        <member name="P:SMSInterfaces.Interfaces.IServiceCredentialStoreOauth.ApplicationId">
+            <summary>
+            Gets or sets the application identifier.
+            </summary>
+            <value>
+            The application identifier.
+            </value>
+        </member>
+        <member name="P:SMSInterfaces.Interfaces.IServiceCredentialStoreOauth.ApplicationSecret">
+            <summary>
+            Gets or sets the application secret.
+            </summary>
+            <value>
+            The application secret.
+            </value>
+        </member>
         <member name="T:SMSInterfaces.Interfaces.ISmsClient">
             <summary>
             
@@ -147,19 +163,19 @@
             The providerresponse.
             </value>
         </member>
-        <member name="T:SMSInterfaces.Interfaces.IOauthAuthorizer">
+        <member name="T:SMSInterfaces.Interfaces.IAuthorizer">
             <summary>
             Performs Oauth authorization 
             </summary>
         </member>
-        <member name="M:SMSInterfaces.Interfaces.IOauthAuthorizer.AuthorizeAsync(SMSInterfaces.Interfaces.IServiceCredentialStoreOauth)">
+        <member name="M:SMSInterfaces.Interfaces.IAuthorizer.AuthorizeAsync(SMSInterfaces.Interfaces.ICredentialStore)">
             <summary>
             Authorizes  asynchronous.
             </summary>
             <param name="credentials">The credentials.</param>
             <returns></returns>
         </member>
-        <member name="E:SMSInterfaces.Interfaces.IOauthAuthorizer.AuthorizationFailed">
+        <member name="E:SMSInterfaces.Interfaces.IAuthorizer.AuthorizationFailed">
             <summary>
             Occurs when [authorization failed].
             </summary>
