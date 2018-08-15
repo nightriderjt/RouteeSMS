@@ -137,5 +137,15 @@ namespace ASPSMSClient
         {
             SmsSent?.Invoke(this, e);
         }
+
+        public async Task<List<ISmsClientResult>> SendSmsAsync(List<string> recipientNumbers, string message)
+        {
+            var results = new List<ISmsClientResult>();
+            foreach (var recipient in recipientNumbers)
+            {
+                results.Add(await this.SendSmsAsync(recipient, message));
+            }
+            return results;
+        }
     }
 }

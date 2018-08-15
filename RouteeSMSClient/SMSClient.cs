@@ -301,5 +301,21 @@ namespace RouteeSMSClient
         {
             SmsSent?.Invoke(this, e);
         }
+
+        /// <summary>
+        /// Sends the SMS asynchronous.
+        /// </summary>
+        /// <param name="recipientNumbers">The recipient numbers.</param>
+        /// <param name="message">The message.</param>
+        /// <returns></returns>
+        public async Task<List<ISmsClientResult>> SendSmsAsync(List<string> recipientNumbers, string message)
+        {
+            var results = new List<ISmsClientResult>();
+            foreach (var recipient in recipientNumbers)
+            {
+                results.Add(await this.SendSmsAsync(recipient, message));
+            }
+            return results;
+        }
     }
 }
