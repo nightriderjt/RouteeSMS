@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SMSInterfaces.Interfaces
@@ -15,7 +16,15 @@ namespace SMSInterfaces.Interfaces
         /// <param name="recipientNumber">The recipient number.</param>
         /// <param name="message">The message.</param>
         /// <returns></returns>
-        Task<ISmsClientResult> SendSmsAsync(string recipientNumber, string message);       
+        Task<ISmsClientResult> SendSmsAsync(string recipientNumber, string message);
+
+        /// <summary>
+        /// Sends the SMS asynchronous.
+        /// </summary>
+        /// <param name="recipientNumbers">The recipient numbers.</param>
+        /// <param name="message">The message.</param>
+        /// <returns></returns>
+        Task<List<ISmsClientResult>> SendSmsAsync(List<string> recipientNumbers, string message);
 
         /// <summary>
         /// Occurs when [on sms failed].
