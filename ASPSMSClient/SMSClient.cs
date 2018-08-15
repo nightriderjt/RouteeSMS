@@ -10,18 +10,39 @@ using SMSInterfaces.Interfaces;
 
 namespace ASPSMSClient
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="SMSInterfaces.Interfaces.ISmsClient" />
     public class SmsClient:SMSInterfaces .Interfaces .ISmsClient
     {
         private string SmsUri { get; } = "https://json.aspsms.com/SendTextSMS";
 
+        /// <summary>
+        /// Gets or sets the options.
+        /// </summary>
+        /// <value>
+        /// The options.
+        /// </value>
         public ASPSMSClient .Base .Options Options { get; set; }
 
-        public SmsClient(IServiceCredentialsStorePlain credentials, Options options)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SmsClient"/> class.
+        /// </summary>
+        /// <param name="credentials">The credentials.</param>
+        /// <param name="options">The options.</param>
+        public SmsClient(SMSInterfaces .Interfaces .ICredentialStore  credentials, Options options)
         {
-            Credentials = credentials;
+            Credentials =(IServiceCredentialsStorePlain) credentials;
             Options = options;
         }
 
+        /// <summary>
+        /// Gets or sets the credentials.
+        /// </summary>
+        /// <value>
+        /// The credentials.
+        /// </value>
         private IServiceCredentialsStorePlain  Credentials { get; set; }
 
         public async Task<ISmsClientResult> SendSmsAsync(string recipientNumber, string message)
@@ -52,7 +73,7 @@ namespace ASPSMSClient
             if (response.IsSuccessful)
             {
 
-                ASPSMSClient.Base.TrackingInfo responseJson =(ASPSMSClient.Base.TrackingInfo)
+                var responseJson =(ASPSMSClient.Base.TrackingInfo)
                     Newtonsoft.Json.JsonConvert.DeserializeObject(response.Content,typeof(ASPSMSClient.Base.TrackingInfo));
                 if (responseJson.StatusCode != "1")
                 {
@@ -101,10 +122,7 @@ namespace ASPSMSClient
             }
         }
 
-        public Task<ITrackingInfo> TrackSmsAsync(string messageId)
-        {
-            throw new NotImplementedException();
-        }
+     
 
       
         public event EventHandler<SMSEventArgs> SmSfailed;

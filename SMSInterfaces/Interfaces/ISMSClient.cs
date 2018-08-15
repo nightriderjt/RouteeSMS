@@ -15,16 +15,7 @@ namespace SMSInterfaces.Interfaces
         /// <param name="recipientNumber">The recipient number.</param>
         /// <param name="message">The message.</param>
         /// <returns></returns>
-        Task<ISmsClientResult> SendSmsAsync(string recipientNumber, string message);
-
-
-        /// <summary>
-        /// Tracks the SMS asynchronous.
-        /// </summary>
-        /// <param name="messageId">The message identifier.</param>
-        /// <returns></returns>
-        Task<ITrackingInfo> TrackSmsAsync(string messageId);
-
+        Task<ISmsClientResult> SendSmsAsync(string recipientNumber, string message);       
 
         /// <summary>
         /// Occurs when [on sms failed].
