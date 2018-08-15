@@ -105,11 +105,12 @@
             <param name="message">The message.</param>
             <returns></returns>
         </member>
-        <member name="M:SMSInterfaces.Interfaces.ISmsClient.TrackSmsAsync(System.String)">
+        <member name="M:SMSInterfaces.Interfaces.ISmsClient.SendSmsAsync(System.Collections.Generic.List{System.String},System.String)">
             <summary>
-            Tracks the SMS asynchronous.
+            Sends the SMS asynchronous.
             </summary>
-            <param name="messageId">The message identifier.</param>
+            <param name="recipientNumbers">The recipient numbers.</param>
+            <param name="message">The message.</param>
             <returns></returns>
         </member>
         <member name="E:SMSInterfaces.Interfaces.ISmsClient.SmSfailed">
@@ -150,6 +151,18 @@
             <value>
             The message identifier.
             </value>
+        </member>
+        <member name="T:SMSInterfaces.Interfaces.ISMStracker">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SMSInterfaces.Interfaces.ISMStracker.TrackSmsAsync(System.String)">
+            <summary>
+            Tracks the SMS asynchronous.
+            </summary>
+            <param name="MessageID">The message identifier.</param>
+            <returns></returns>
         </member>
         <member name="T:SMSInterfaces.Interfaces.ITrackingInfo">
             <summary>

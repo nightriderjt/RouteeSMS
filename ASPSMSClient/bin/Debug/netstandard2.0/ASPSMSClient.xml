@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASPSMSClient</name>
+    </assembly>
+    <members>
+        <member name="P:ASPSMSClient.Base.Credentials.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>
+            The username.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.Credentials.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.Options.UrlDeliveryNotification">
+            <summary>
+            URL that will be called when a message is delivered instantly. The submitted TransactionReferenceNumber will added to the URL.
+            </summary>
+            <value>
+            The URL delivery notification.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.Options.UrlNonDeliveryNotification">
+            <summary>
+            URL that will be connected when a message is not delivered. The submitted TransactionReferenceNumber will added to the URL.
+            </summary>
+            <value>
+            The URL non delivery notification.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.Options.AffiliateId">
+            <summary>
+            If you are a affiliate partner with ASPSMS you can provide your affiliate-id here.
+            </summary>
+            <value>
+            The affiliate identifier.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.Options.ForceGsm7Bit">
+            <summary>
+            Gets or sets a value indicating whether Force sending GSM7bit characters only to avoid extra cost by acidentally using Unicode Characters [force GSM7 bit].
+            </summary>
+            <value>
+              <c>true</c> if [force GSM7 bit]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.Options.Originator">
+            <summary>
+            You can use a phone number or up to 11 Alphabetic characters (e.g. 'MYBUSINESS') as Originator. In order to use a phone number (e.g. '+4176000000') you must unlock it first using the UnlockOriginator method
+            </summary>
+            <value>
+            The originator.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.Options.DeferredDeliveryTime">
+            <summary>
+            By setting the deferred delivery time you can schedule jobs to execute at a specific time. The date time format accepted is ISO8601 UTC YYYY-MM-DDThh:mm:ssTZD (e.g.'2018-08-31T14:00:07+02:00')
+            </summary>
+            <value>
+            The deferred delivery time.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.Options.FlashingSms">
+            <summary>
+            The message appears directly on the screen of the mobile phone. A flashing message isn't saved directly on the mobile phone. The recipient has to choose to save it. Otherwise the message irrevocably disappears from the screen.
+            </summary>
+            <value>
+              <c>true</c> if [flashing SMS]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:ASPSMSClient.Base.SmsResult">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:SMSInterfaces.Interfaces.ISmsClientResult" />
+        </member>
+        <member name="M:ASPSMSClient.Base.SmsResult.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ASPSMSClient.Base.SmsResult"/> class.
+            </summary>
+        </member>
+        <member name="P:ASPSMSClient.Base.SmsResult.SMSStatus">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.SmsResult.ProviderResponse">
+            <summary>
+            Gets or sets the provider response.
+            </summary>
+            <value>
+            The provider response.
+            </value>
+        </member>
+        <member name="P:ASPSMSClient.Base.SmsResult.TrackingId">
+            <summary>
+            Gets or sets the tracking identifier.
+            </summary>
+            <value>
+            The tracking identifier.
+            </value>
+        </member>
+        <member name="T:ASPSMSClient.Base.TrackingInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ASPSMSClient.Base.TrackingInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ASPSMSClient.Base.TrackingInfo"/> class.
+            </summary>
+        </member>
+        <member name="T:ASPSMSClient.SmsClient">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:SMSInterfaces.Interfaces.ISmsClient" />
+        </member>
+        <member name="P:ASPSMSClient.SmsClient.Options">
+            <summary>
+            Gets or sets the options.
+            </summary>
+            <value>
+            The options.
+            </value>
+        </member>
+        <member name="M:ASPSMSClient.SmsClient.#ctor(SMSInterfaces.Interfaces.ICredentialStore,ASPSMSClient.Base.Options)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ASPSMSClient.SmsClient"/> class.
+            </summary>
+            <param name="credentials">The credentials.</param>
+            <param name="options">The options.</param>
+        </member>
+        <member name="P:ASPSMSClient.SmsClient.Credentials">
+            <summary>
+            Gets or sets the credentials.
+            </summary>
+            <value>
+            The credentials.
+            </value>
+        </member>
+    </members>
+</doc>

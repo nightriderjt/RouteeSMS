@@ -11,3 +11,4 @@ G:\Archive\Programmata\GitHub\RouteeSMS\ASPSMSClient\obj\Debug\netstandard2.0\AS
 G:\Archive\Programmata\GitHub\RouteeSMS\ASPSMSClient\obj\Debug\netstandard2.0\ASPSMSClient.csproj.CopyComplete
 G:\Archive\Programmata\GitHub\RouteeSMS\ASPSMSClient\obj\Debug\netstandard2.0\ASPSMSClient.dll
 G:\Archive\Programmata\GitHub\RouteeSMS\ASPSMSClient\obj\Debug\netstandard2.0\ASPSMSClient.pdb
+G:\Archive\Programmata\GitHub\RouteeSMS\ASPSMSClient\bin\Debug\netstandard2.0\ASPSMSClient.xml

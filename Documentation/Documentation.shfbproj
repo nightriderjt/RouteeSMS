@@ -49,6 +49,7 @@
     <DocumentationSources>
       <DocumentationSource sourceFile="..\RouteeSMSClient\RouteeSMSClient.csproj" />
       <DocumentationSource sourceFile="..\SMSInterfaces\SMSInterfaces.csproj" />
+      <DocumentationSource sourceFile="..\ASPSMSClient\ASPSMSClient.csproj" />
     </DocumentationSources>
     <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, Privates, PrivateFields, Protected, ProtectedInternalAsProtected, PublicCompilerGenerated, NonBrowsable</VisibleItems>
     <MissingTags>AutoDocumentCtors, AutoDocumentDispose</MissingTags>
